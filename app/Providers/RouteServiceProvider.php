@@ -16,6 +16,12 @@ class RouteServiceProvider extends ServiceProvider
      */
     protected $namespace = 'App\Http\Controllers';
 
+    protected $namespaceGuest = 'App\Http\Controllers\Guest';
+
+    protected $namespaceAdmin = 'App\Http\Controllers\Admin';
+
+    protected $prefixAdmin = 'admin';
+
     /**
      * Define your route model bindings, pattern filters, etc.
      *
@@ -52,8 +58,137 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapWebRoutes()
     {
         Route::middleware('web')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/web.php'));
+            ->namespace($this->namespace)
+            ->group(base_path('routes/web.php'));
+
+        //Router Guest
+        $this->routeGuest();
+
+        //Router admin
+        $this->routeAdmin();
+    }
+
+    private function routeAdmin(){
+        //Router admin
+        $middleareAdmin = ['web','auth'];
+        Route::middleware($middleareAdmin)
+            ->namespace($this->namespaceAdmin)
+            ->prefix($this->prefixAdmin)
+            ->name($this->prefixAdmin.'.')
+            ->group(base_path('routes/admin/route_home.php'));
+
+        Route::middleware($middleareAdmin)
+            ->namespace($this->namespaceAdmin)
+            ->prefix($this->prefixAdmin)
+            ->name($this->prefixAdmin.'.')
+            ->group(base_path('routes/admin/route_common.php'));
+
+        Route::middleware($middleareAdmin)
+            ->namespace($this->namespaceAdmin)
+            ->prefix($this->prefixAdmin)
+            ->name($this->prefixAdmin.'.')
+            ->group(base_path('routes/admin/route_product.php'));
+
+        Route::middleware($middleareAdmin)
+            ->namespace($this->namespaceAdmin)
+            ->prefix($this->prefixAdmin)
+            ->name($this->prefixAdmin.'.')
+            ->group(base_path('routes/admin/route_project.php'));
+
+        Route::middleware($middleareAdmin)
+            ->namespace($this->namespaceAdmin)
+            ->prefix($this->prefixAdmin)
+            ->name($this->prefixAdmin.'.')
+            ->group(base_path('routes/admin/route_vendor.php'));
+
+        Route::middleware($middleareAdmin)
+            ->namespace($this->namespaceAdmin)
+            ->prefix($this->prefixAdmin)
+            ->name($this->prefixAdmin.'.')
+            ->group(base_path('routes/admin/route_setting.php'));
+
+        Route::middleware($middleareAdmin)
+            ->namespace($this->namespaceAdmin)
+            ->prefix($this->prefixAdmin)
+            ->name($this->prefixAdmin.'.')
+            ->group(base_path('routes/admin/route_blog.php'));
+
+        Route::middleware($middleareAdmin)
+            ->namespace($this->namespaceAdmin)
+            ->prefix($this->prefixAdmin)
+            ->name($this->prefixAdmin.'.')
+            ->group(base_path('routes/admin/route_address.php'));
+
+        Route::middleware($middleareAdmin)
+            ->namespace($this->namespaceAdmin)
+            ->prefix($this->prefixAdmin)
+            ->name($this->prefixAdmin.'.')
+            ->group(base_path('routes/admin/route_contact.php'));
+
+        Route::middleware($middleareAdmin)
+            ->namespace($this->namespaceAdmin)
+            ->prefix($this->prefixAdmin)
+            ->name($this->prefixAdmin.'.')
+            ->group(base_path('routes/admin/route_order.php'));
+
+        Route::middleware($middleareAdmin)
+            ->namespace($this->namespaceAdmin)
+            ->prefix($this->prefixAdmin)
+            ->name($this->prefixAdmin.'.')
+            ->group(base_path('routes/admin/route_manufacture.php'));
+
+        Route::middleware($middleareAdmin)
+            ->namespace($this->namespaceAdmin)
+            ->prefix($this->prefixAdmin)
+            ->name($this->prefixAdmin.'.')
+            ->group(base_path('routes/admin/route_album.php'));
+
+        Route::middleware($middleareAdmin)
+            ->namespace($this->namespaceAdmin)
+            ->prefix($this->prefixAdmin)
+            ->name($this->prefixAdmin.'.')
+            ->group(base_path('routes/admin/route_equipment.php'));
+
+        Route::middleware($middleareAdmin)
+            ->namespace($this->namespaceAdmin)
+            ->prefix($this->prefixAdmin)
+            ->name($this->prefixAdmin.'.')
+            ->group(base_path('routes/admin/route_design.php'));
+    }
+
+    private function routeGuest(){
+
+        Route::middleware('web')
+            ->namespace($this->namespaceGuest)
+            ->group(base_path('routes/guest/route_home.php'));
+
+        Route::middleware('web')
+            ->namespace($this->namespaceGuest)
+            ->group(base_path('routes/guest/route_product.php'));
+
+        Route::middleware('web')
+            ->namespace($this->namespaceGuest)
+            ->group(base_path('routes/guest/route_project.php'));
+
+        Route::middleware('web')
+            ->namespace($this->namespaceGuest)
+            ->group(base_path('routes/guest/route_collection.php'));
+
+        Route::middleware('web')
+            ->namespace($this->namespaceGuest)
+            ->group(base_path('routes/guest/route_blog.php'));
+
+        Route::middleware('web')
+            ->namespace($this->namespaceGuest)
+            ->group(base_path('routes/guest/route_cart.php'));
+
+        Route::middleware('web')
+            ->namespace($this->namespaceGuest)
+            ->group(base_path('routes/guest/route_contact.php'));
+
+        Route::middleware('web')
+            ->namespace($this->namespaceGuest)
+            ->group(base_path('routes/guest/route_about.php'));
     }
 
     /**
@@ -66,8 +201,8 @@ class RouteServiceProvider extends ServiceProvider
     protected function mapApiRoutes()
     {
         Route::prefix('api')
-             ->middleware('api')
-             ->namespace($this->namespace)
-             ->group(base_path('routes/api.php'));
+            ->middleware('api')
+            ->namespace($this->namespace)
+            ->group(base_path('routes/api.php'));
     }
 }

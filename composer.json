@@ -11,9 +11,14 @@
         "php": "^7.1.3",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^1.0",
+        "cviebrock/eloquent-sluggable": "^4.6",
+        "darryldecode/cart": "^4.0",
+        "davejamesmiller/laravel-breadcrumbs": "^5.1",
+        "ixudra/curl": "^6.16"
     },
     "require-dev": {
+        "barryvdh/laravel-debugbar": "^3.2",
         "beyondcode/laravel-dump-server": "^1.0",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
