@@ -3,9 +3,11 @@
         <div class="row">
             <div class="col-md-2 col-sm-12 col-xs-12">
                 <div class="nav-rp">
-                    <a href="#nav-rp"><img src="images/nav-rp.png" alt="Menu"></a>
+                    <a href="#nav-rp"><img src="{{\App\Common\AppCommon::assetPublic('images/guest/nav-rp.png')}}" alt="Menu"></a>
                 </div>
-                <div class="logo"><a href=""><img src="upload/hinhanh/logotrangcenter-8522.png" alt="VIETNAM ELEVATOR CENTER"></a></div>
+                <div class="logo"><a href="">
+                        <img src="{{\App\Common\AppCommon::assetPublic('logo.png')}}" alt="Công Ty TNHH Kỹ Nghệ Toàn Thắng"></a>
+                </div>
                 <div class="clear"></div>
             </div>
             <div class="col-md-10 col-sm-12 col-xs-12 hidden-rp">
@@ -38,25 +40,25 @@
                                 <li>
                                     <a href="{{route('collection')}}">Thiết bị</a>
                                     <ul>
-                                        <li><a href="san-pham/thiet-bi/thiet-bi-co">Thiết bị cơ</a></li>
-                                        <li><a href="san-pham/thiet-bi/thiet-bi-dien">Thiết bị điện</a></li>
-                                        <li><a href="san-pham/thiet-bi/may-keo">Máy kéo</a></li>
+                                        <li><a href="{{route('collection')}}">Thiết bị cơ</a></li>
+                                        <li><a href="{{route('collection')}}">Thiết bị điện</a></li>
+                                        <li><a href="{{route('collection')}}">Máy kéo</a></li>
                                     </ul>
                                 </li>
                                 <li>
                                     <a href="{{route('collection')}}">Thiết trí</a>
                                     <ul>
-                                        <li><a href="san-pham/thiet-tri/kieu-cua">Kiểu cửa</a></li>
-                                        <li><a href="san-pham/thiet-tri/kieu-khung-cua">Kiểu khung cửa</a></li>
-                                        <li><a href="san-pham/thiet-tri/kieu-tran-phong-thang">Kiểu trần phòng thang</a></li>
-                                        <li><a href="san-pham/thiet-tri/san-phong-thang">Sàn phòng thang</a></li>
-                                        <li><a href="san-pham/thiet-tri/tay-vin">Tay vịn</a></li>
-                                        <li><a href="san-pham/thiet-tri/bang-dieu-khien">Bảng điều khiển</a></li>
-                                        <li><a href="san-pham/thiet-tri/kieu-hoa-van-trang-tri">Kiểu hoa văn trang trí</a></li>
+                                        <li><a href="{{route('collection')}}">Kiểu cửa</a></li>
+                                        <li><a href="{{route('collection')}}">Kiểu khung cửa</a></li>
+                                        <li><a href="{{route('collection')}}">Kiểu trần phòng thang</a></li>
+                                        <li><a href="{{route('collection')}}">Sàn phòng thang</a></li>
+                                        <li><a href="{{route('collection')}}">Tay vịn</a></li>
+                                        <li><a href="{{route('collection')}}">Bảng điều khiển</a></li>
+                                        <li><a href="{{route('collection')}}">Kiểu hoa văn trang trí</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="gia-cong-co-khi.html"  class="font_custom  border-none">Gia công cơ khí</a></li>
-                                <li><a href="tai-lieu-ky-thuat.html"  class="font_custom  border-none">Tài liệu</a></li>
+                                <li><a href="{{route('out_source')}}"  class="font_custom  border-none">Gia công cơ khí</a></li>
+                                <li><a href="{{route('blogs')}}"  class="font_custom  border-none">Tin tức</a></li>
                                 <!-- <li><a href="tin-tuc.html"  class="font_custom  border-none">Tin tức</a></li>    -->
                                 <li><a href="{{route('contact')}}"  class="font_custom  border-none">Liên hệ</a></li>
                                 <span class="clear"></span>

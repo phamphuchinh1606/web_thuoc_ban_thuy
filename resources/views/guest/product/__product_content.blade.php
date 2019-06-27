@@ -7,23 +7,30 @@
                 <div class="product-gallery col-md-6 col-sm-6 col-xs-12">
                     <div class="gallery row">
                         <div class="full col-md-9 col-sm-9 col-xs-9 pull-left">
-                            <a rel="example_group" href="upload/product/cab-33-tham-khao-483.jpg"><img data-src="upload/product/cab-33-tham-khao-483.jpg" src="thumb.php?src=upload/product/cab-33-tham-khao-483.jpg&amp;h=400&amp;w=370&amp;zc=2&amp;q=100" alt="CAB-38"></a>
+                            <a rel="example_group" href="http://saonamviet.net/upload/product/cab-33-tham-khao-483.jpg">
+                                <img data-src="http://saonamviet.net/upload/product/cab-33-tham-khao-483.jpg" src="http://saonamviet.net/thumb.php?src=http://saonamviet.net/upload/product/cab-33-tham-khao-483.jpg&amp;h=400&amp;w=370&amp;zc=2&amp;q=100" alt="CAB-38"></a>
                         </div>
                         <div class="hidden">
                         </div>
                         <div class="previews col-md-2 col-sm-2 col-xs-3 pull-left">
-                            <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 40px;"><ul class="bx-slider" style="width: auto; position: relative; transition-duration: 0s; transform: translate3d(0px, -44.4531px, 0px);"><li class="item-thumbnail bx-clone" style="float: none; list-style: none; position: relative; width: 31px; margin-bottom: 5px;" aria-hidden="true"><a data-original="upload/product/cab-33-tham-khao-483.jpg" data-full="thumb.php?src=upload/product/cab-33-tham-khao-483.jpg&amp;h=400&amp;w=370&amp;zc=2&amp;q=100"><img src="thumb.php?src=upload/product/cab-33-tham-khao-483.jpg&amp;h=70&amp;w=55&amp;zc=2&amp;q=100"></a></li>
-                                        <li class="item-thumbnail" style="float: none; list-style: none; position: relative; width: 31px; margin-bottom: 5px;" aria-hidden="false"><a data-original="upload/product/cab-33-tham-khao-483.jpg" data-full="thumb.php?src=upload/product/cab-33-tham-khao-483.jpg&amp;h=400&amp;w=370&amp;zc=2&amp;q=100"><img src="thumb.php?src=upload/product/cab-33-tham-khao-483.jpg&amp;h=70&amp;w=55&amp;zc=2&amp;q=100"></a></li>
-                                        <li class="item-thumbnail bx-clone" style="float: none; list-style: none; position: relative; width: 31px; margin-bottom: 5px;" aria-hidden="true"><a data-original="upload/product/cab-33-tham-khao-483.jpg" data-full="thumb.php?src=upload/product/cab-33-tham-khao-483.jpg&amp;h=400&amp;w=370&amp;zc=2&amp;q=100"><img src="thumb.php?src=upload/product/cab-33-tham-khao-483.jpg&amp;h=70&amp;w=55&amp;zc=2&amp;q=100"></a></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev disabled" href="">Prev</a><a class="bx-next disabled" href="">Next</a></div></div></div>
+                            <div class="bx-wrapper" style="max-width: 100%;"><div class="bx-viewport" aria-live="polite" style="width: 100%; overflow: hidden; position: relative; height: 40px;"><ul class="bx-slider" style="width: auto; position: relative; transition-duration: 0s; transform: translate3d(0px, -44.4531px, 0px);"><li class="item-thumbnail bx-clone" style="float: none; list-style: none; position: relative; width: 31px; margin-bottom: 5px;" aria-hidden="true"><a data-original="http://saonamviet.net/upload/product/cab-33-tham-khao-483.jpg" data-full="http://saonamviet.net/thumb.php?src=http://saonamviet.net/upload/product/cab-33-tham-khao-483.jpg&amp;h=400&amp;w=370&amp;zc=2&amp;q=100"><img src="http://saonamviet.net/thumb.php?src=http://saonamviet.net/upload/product/cab-33-tham-khao-483.jpg&amp;h=70&amp;w=55&amp;zc=2&amp;q=100"></a></li>
+                                        <li class="item-thumbnail" style="float: none; list-style: none; position: relative; width: 31px; margin-bottom: 5px;" aria-hidden="false"><a data-original="http://saonamviet.net/upload/product/cab-33-tham-khao-483.jpg" data-full="http://saonamviet.net/thumb.php?src=http://saonamviet.net/upload/product/cab-33-tham-khao-483.jpg&amp;h=400&amp;w=370&amp;zc=2&amp;q=100"><img src="http://saonamviet.net/thumb.php?src=http://saonamviet.net/upload/product/cab-33-tham-khao-483.jpg&amp;h=70&amp;w=55&amp;zc=2&amp;q=100"></a></li>
+                                        <li class="item-thumbnail bx-clone" style="float: none; list-style: none; position: relative; width: 31px; margin-bottom: 5px;" aria-hidden="true"><a data-original="http://saonamviet.net/upload/product/cab-33-tham-khao-483.jpg" data-full="http://saonamviet.net/thumb.php?src=http://saonamviet.net/upload/product/cab-33-tham-khao-483.jpg&amp;h=400&amp;w=370&amp;zc=2&amp;q=100"><img src="http://saonamviet.net/thumb.php?src=http://saonamviet.net/upload/product/cab-33-tham-khao-483.jpg&amp;h=70&amp;w=55&amp;zc=2&amp;q=100"></a></li></ul></div><div class="bx-controls bx-has-controls-direction"><div class="bx-controls-direction"><a class="bx-prev disabled" href="">Prev</a><a class="bx-next disabled" href="">Next</a></div></div></div>
                         </div>
                         <div class="clear"></div>
                     </div>
                     <div class="row">
                         <div class="icon-share col-md-9 col-sm-9 col-xs-8">
                             <span>Share : </span>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=http://saonamviet.net/san-pham/cab38.html" target="blank"><img src="images/facebook.png" alt="Share on Facebook"></a>
-                            <a href="https://twitter.com/home?status=http://saonamviet.net/san-pham/cab38.html" target="blank"><img src="images/twitter.png" alt="Share on Twitter"></a>
-                            <a href="https://plus.google.com/share?url=http://saonamviet.net/san-pham/cab38.html"><img src="images/google.png" alt="Share on Google+"></a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=http://saonamviet.net/san-pham/cab38.html" target="blank">
+                                <img src="{{\App\Common\AppCommon::assetPublic('images/guest/facebook.png')}}" alt="Share on Facebook">
+                            </a>
+                            <a href="https://twitter.com/home?status=http://saonamviet.net/san-pham/cab38.html" target="blank">
+                                <img src="{{\App\Common\AppCommon::assetPublic('images/guest/twitter.png')}}" alt="Share on Twitter">
+                            </a>
+                            <a href="https://plus.google.com/share?url=http://saonamviet.net/san-pham/cab38.html">
+                                <img src="{{\App\Common\AppCommon::assetPublic('images/guest/google.png')}}" alt="Share on Google+">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -63,9 +70,9 @@
                 <div class="_item_prd">
                     <div class="_img_prd">
                         <div class="_img">
-                            <a href="san-pham/cab37.html"><img src="thumb.php?src=upload/product/cab-32-tham-khao-5567.jpg&amp;h=250&amp;w=250&amp;zc=2&amp;q=100" alt="CAB-37"></a>
+                            <a href="{{route('product')}}"><img src="http://saonamviet.net/thumb.php?src=http://saonamviet.net/upload/product/cab-32-tham-khao-5567.jpg&amp;h=250&amp;w=250&amp;zc=2&amp;q=100" alt="CAB-37"></a>
                         </div>
-                        <h3><a href="san-pham/cab37.html">CAB-37</a></h3>
+                        <h3><a href="{{route('product')}}">CAB-37</a></h3>
                     </div>
                 </div>
             </div>
@@ -73,9 +80,9 @@
                 <div class="_item_prd">
                     <div class="_img_prd">
                         <div class="_img">
-                            <a href="san-pham/cab30.html"><img src="thumb.php?src=upload/product/cab-24-4006.jpg&amp;h=250&amp;w=250&amp;zc=2&amp;q=100" alt="CAB-30"></a>
+                            <a href="{{route('product')}}"><img src="http://saonamviet.net/thumb.php?src=http://saonamviet.net/upload/product/cab-24-4006.jpg&amp;h=250&amp;w=250&amp;zc=2&amp;q=100" alt="CAB-30"></a>
                         </div>
-                        <h3><a href="san-pham/cab30.html">CAB-30</a></h3>
+                        <h3><a href="{{route('product')}}">CAB-30</a></h3>
                     </div>
                 </div>
             </div>
@@ -83,9 +90,9 @@
                 <div class="_item_prd">
                     <div class="_img_prd">
                         <div class="_img">
-                            <a href="san-pham/cab23.html"><img src="thumb.php?src=upload/product/cab-18-8817.jpg&amp;h=250&amp;w=250&amp;zc=2&amp;q=100" alt="CAB-23"></a>
+                            <a href="{{route('product')}}"><img src="http://saonamviet.net/thumb.php?src=http://saonamviet.net/upload/product/cab-18-8817.jpg&amp;h=250&amp;w=250&amp;zc=2&amp;q=100" alt="CAB-23"></a>
                         </div>
-                        <h3><a href="san-pham/cab23.html">CAB-23</a></h3>
+                        <h3><a href="{{route('product')}}">CAB-23</a></h3>
                     </div>
                 </div>
             </div>
@@ -93,9 +100,9 @@
                 <div class="_item_prd">
                     <div class="_img_prd">
                         <div class="_img">
-                            <a href="san-pham/cab22.html"><img src="thumb.php?src=upload/product/cab-17-2332.jpg&amp;h=250&amp;w=250&amp;zc=2&amp;q=100" alt="CAB-22"></a>
+                            <a href="{{route('product')}}"><img src="http://saonamviet.net/thumb.php?src=http://saonamviet.net/upload/product/cab-17-2332.jpg&amp;h=250&amp;w=250&amp;zc=2&amp;q=100" alt="CAB-22"></a>
                         </div>
-                        <h3><a href="san-pham/cab22.html">CAB-22</a></h3>
+                        <h3><a href="{{route('product')}}">CAB-22</a></h3>
                     </div>
                 </div>
             </div>

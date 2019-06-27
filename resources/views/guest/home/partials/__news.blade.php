@@ -2,22 +2,22 @@
     <div class="container">
         <div class="row mt-30">
             <div class="news-nb col-md-5 col-sm-5 col-xs-12">
-                <h3 class="head-news"><span>Tin tức</span>/<small><a href="tin-tuc.html">+Xem thêm</a></small></h3>
+                <h3 class="head-news"><span>Tin tức</span>/<small><a href="{{route('blogs')}}">+Xem thêm</a></small></h3>
                 <ul>
                     <li class="item_news_home">
-                        <h3><a href="tin-tuc/trang-tri-noi-that-thang-may-cabin.html">Trang trí nội thất thang máy Cabin</a></h3>
+                        <h3><a href="{{route('blog_detail')}}">Trang trí nội thất thang máy Cabin</a></h3>
                         <p><small>24/11/2017</small></p>
                     </li>
                     <li class="item_news_home">
-                        <h3><a href="tin-tuc/nhung-dieu-nen-va-khong-nen-lam-khi-su-dung-thang-may-p1.html">Những điều nên và không nên làm khi sử dụng thang máy (P1)</a></h3>
+                        <h3><a href="{{route('blog_detail')}}">Những điều nên và không nên làm khi sử dụng thang máy (P1)</a></h3>
                         <p><small>24/11/2017</small></p>
                     </li>
                     <li class="item_news_home">
-                        <h3><a href="tin-tuc/nhung-dieu-nen-va-khong-nen-lam-khi-su-dung-thang-may-p2.html">Những điều nên và không nên làm khi sử dụng thang máy (P2)</a></h3>
+                        <h3><a href="{{route('blog_detail')}}">Những điều nên và không nên làm khi sử dụng thang máy (P2)</a></h3>
                         <p><small>24/11/2017</small></p>
                     </li>
                     <li class="item_news_home">
-                        <h3><a href="tin-tuc/nhung-dieu-can-biet-khi-mua-thang-may-gia-dinh.html">Những điều cần biết khi mua thang máy gia đình</a></h3>
+                        <h3><a href="{{route('blog_detail')}}">Những điều cần biết khi mua thang máy gia đình</a></h3>
                         <p><small>24/11/2017</small></p>
                     </li>
                 </ul>
@@ -34,36 +34,36 @@
                         <div class="col-md-9 col-sm-9 col-xs-12 ul-list">
                             <ul>
                                 <li>
-                                    <a href="san-pham/thang-tai-khach"><img src="upload/product/th1-339_65x65.png"></a>
-                                    <h4><a href="san-pham/thang-tai-khach">Thang Tải Khách</a></h4>
+                                    <a href="{{route('collection')}}"><img src="http://saonamviet.net/upload/product/th1-339_65x65.png"></a>
+                                    <h4><a href="{{route('collection')}}">Thang Tải Khách</a></h4>
                                 </li>
                                 <li>
-                                    <a href="san-pham/thang-quan-sat"><img src="upload/product/th2-8105_65x65.png"></a>
-                                    <h4><a href="san-pham/thang-quan-sat">Thang Quan Sát</a></h4>
+                                    <a href="{{route('collection')}}"><img src="http://saonamviet.net/upload/product/th2-8105_65x65.png"></a>
+                                    <h4><a href="{{route('collection')}}">Thang Quan Sát</a></h4>
                                 </li>
                                 <li>
-                                    <a href="san-pham/thang-gia-dinh"><img src="upload/product/th3-4309_65x65.png"></a>
-                                    <h4><a href="san-pham/thang-gia-dinh">Thang Gia Đình</a></h4>
+                                    <a href="{{route('collection')}}"><img src="http://saonamviet.net/upload/product/th3-4309_65x65.png"></a>
+                                    <h4><a href="{{route('collection')}}">Thang Gia Đình</a></h4>
                                 </li>
                                 <li>
-                                    <a href="san-pham/thang-benh-vien"><img src="upload/product/th4-1342_65x65.png"></a>
-                                    <h4><a href="san-pham/thang-benh-vien">Thang Bệnh Viện</a></h4>
+                                    <a href="{{route('collection')}}"><img src="http://saonamviet.net/upload/product/th4-1342_65x65.png"></a>
+                                    <h4><a href="{{route('collection')}}">Thang Bệnh Viện</a></h4>
                                 </li>
                                 <li>
-                                    <a href="san-pham/thang-tai-o-to"><img src="upload/product/thangtaioto827-5801_65x65.png"></a>
-                                    <h4><a href="san-pham/thang-tai-o-to">Thang Tải Ô tô</a></h4>
+                                    <a href="{{route('collection')}}"><img src="http://saonamviet.net/upload/product/thangtaioto827-5801_65x65.png"></a>
+                                    <h4><a href="{{route('collection')}}">Thang Tải Ô tô</a></h4>
                                 </li>
                                 <li>
-                                    <a href="san-pham/thang-tai-hang"><img src="upload/product/th5-7687_65x65.png"></a>
-                                    <h4><a href="san-pham/thang-tai-hang">Thang Tải Hàng</a></h4>
+                                    <a href="{{route('collection')}}"><img src="http://saonamviet.net/upload/product/th5-7687_65x65.png"></a>
+                                    <h4><a href="{{route('collection')}}">Thang Tải Hàng</a></h4>
                                 </li>
                                 <li>
-                                    <a href="san-pham/thang-tai-thuc-pham"><img src="upload/product/thangtaithucpham-5292_65x65.png"></a>
-                                    <h4><a href="san-pham/thang-tai-thuc-pham">Thang Tải Thực Phẩm</a></h4>
+                                    <a href="{{route('collection')}}"><img src="http://saonamviet.net/upload/product/thangtaithucpham-5292_65x65.png"></a>
+                                    <h4><a href="{{route('collection')}}">Thang Tải Thực Phẩm</a></h4>
                                 </li>
                                 <li>
-                                    <a href="san-pham/thang-nhap-khau"><img src="upload/product/thangkhongphongmay192-9955_65x65.png"></a>
-                                    <h4><a href="san-pham/thang-nhap-khau">Thang Nhập Khẩu</a></h4>
+                                    <a href="{{route('collection')}}"><img src="http://saonamviet.net/upload/product/thangkhongphongmay192-9955_65x65.png"></a>
+                                    <h4><a href="{{route('collection')}}">Thang Nhập Khẩu</a></h4>
                                 </li>
                                 <div class="clear"></div>
                             </ul>

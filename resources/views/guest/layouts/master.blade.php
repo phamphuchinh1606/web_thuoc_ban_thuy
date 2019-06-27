@@ -4,10 +4,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <base href="http://saonamviet.net/">
-    <link id="favicon" rel="shortcut icon" href="upload/hinhanh/faviconsaonamviet-3017_40x40.png" type="image/x-icon" />
+    <base href="{{asset('')}}">
+    <link id="favicon" rel="shortcut icon" href="{{\App\Common\AppCommon::assetPublic('favicon.png')}}" type="image/x-icon" />
 
-    <title>VIETNAM ELEVATOR CENTER</title>
+    <title>Công Ty TNHH Kỹ Nghệ Toàn Thắng</title>
     <meta name="description" content="">
     <meta name="keywords" content="saonamviet, center, elevator, thangmay, thang máy,">
 
@@ -17,7 +17,7 @@
     <meta name="ICBM" content="10.8266157,106.6222343">
     <meta name="geo.position" content="10.8266157,106.6222343">
     <meta name="geo.placename" content="8/3A Phan Văn Hớn, P. Tân Thới Nhất, Q.12, TP. HCM">
-    <meta name="author" content="VIETNAM ELEVATOR CENTER">
+    <meta name="author" content="Công Ty TNHH Kỹ Nghệ Toàn Thắng">
 
     <link rel="stylesheet" href="{{AppCommon::assetPublic('css/guest/libs/bootstrap.min.css')}}">
 

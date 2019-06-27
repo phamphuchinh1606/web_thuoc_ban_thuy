@@ -16,10 +16,10 @@
                                 <div class="khung">
                                     <!-- <div class="main-title"><span class="t-transf">Liên hệ</span></div> -->
                                     <div class="form_contact">
-                                        <p></p><p>Văn phòng &amp; Nhà xưởng :&nbsp;8/3A Phan Văn Hớn, P. Tân Thới Nhất, Quận 12 ,TP HCM</p>
+                                        <p></p><p>Văn phòng &amp; Nhà xưởng :&nbsp;26 Đường số 2 Vạn Phúc City, QL. 13, Hiệp Bình Phước, Q. Thủ Đức, TP. Hồ Chí Minh</p>
 
                                         <p>Hotline : <span style="font-family: arial, helvetica, sans-serif;">0907 130 484 - 0938957362</span><br>
-                                            Email&nbsp; &nbsp;: giaphuongtran@gmail.com</p>
+                                            Email&nbsp; &nbsp;: kynghetoanthang@gmail.com</p>
                                         <p></p>
                                     </div>
                                     <div class="row">
