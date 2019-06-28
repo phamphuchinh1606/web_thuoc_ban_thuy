@@ -14,6 +14,7 @@ class ProductDetailController extends Controller
     public function index($slug = null){
         $product = $this->productService->getInfoProductBySlug($slug);
         $productHots = $this->productService->getListProductHot(4);
+        $this->productService->updateStepView($product->id);
         $productSameTypes = new StdClass();
         if(isset($product)){
             $productSameTypes = $this->productService->getListProductSameType($product->id,$product);

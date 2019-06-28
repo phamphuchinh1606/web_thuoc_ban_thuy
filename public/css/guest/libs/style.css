@@ -1,24 +1,24 @@
 /*@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=vietnamese');*/
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:400,500&subset=vietnamese');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=vietnamese');
-@font-face {
-    font-family: 'MontserratSemiBold';
-    src: url('../fonts/mont/MontserratSemiBold.eot');
-    src: url('../fonts/mont/MontserratSemiBold.eot') format('embedded-opentype'),
-         url('../fonts/mont/MontserratSemiBold.woff2') format('woff2'),
-         url('../fonts/mont/MontserratSemiBold.woff') format('woff'),
-         url('../fonts/mont/MontserratSemiBold.ttf') format('truetype'),
-         url('../fonts/mont/MontserratSemiBold.svg#MontserratSemiBold') format('svg');
-}
-@font-face {
-    font-family: 'UTMYenTu';
-    src: url('../fonts/yentu/UTMYenTu.eot');
-    src: url('../fonts/yentu/UTMYenTu.eot') format('embedded-opentype'),
-         url('../fonts/yentu/UTMYenTu.woff2') format('woff2'),
-         url('../fonts/yentu/UTMYenTu.woff') format('woff'),
-         url('../fonts/yentu/UTMYenTu.ttf') format('truetype'),
-         url('../fonts/yentu/UTMYenTu.svg#UTMYenTu') format('svg');
-}
+/*@font-face {*/
+/*    font-family: 'MontserratSemiBold';*/
+/*    src: url('../fonts/mont/MontserratSemiBold.eot');*/
+/*    src: url('../fonts/mont/MontserratSemiBold.eot') format('embedded-opentype'),*/
+/*         url('../fonts/mont/MontserratSemiBold.woff2') format('woff2'),*/
+/*         url('../fonts/mont/MontserratSemiBold.woff') format('woff'),*/
+/*         url('../fonts/mont/MontserratSemiBold.ttf') format('truetype'),*/
+/*         url('../fonts/mont/MontserratSemiBold.svg#MontserratSemiBold') format('svg');*/
+/*}*/
+/*@font-face {*/
+/*    font-family: 'UTMYenTu';*/
+/*    src: url('../fonts/yentu/UTMYenTu.eot');*/
+/*    src: url('../fonts/yentu/UTMYenTu.eot') format('embedded-opentype'),*/
+/*         url('../fonts/yentu/UTMYenTu.woff2') format('woff2'),*/
+/*         url('../fonts/yentu/UTMYenTu.woff') format('woff'),*/
+/*         url('../fonts/yentu/UTMYenTu.ttf') format('truetype'),*/
+/*         url('../fonts/yentu/UTMYenTu.svg#UTMYenTu') format('svg');*/
+/*}*/
 
 
 /* .bg-white{background: #fff;} */
@@ -376,7 +376,7 @@ box-sizing: border-box;}
 .visit_hidden{height: 0; width: 0; overflow: hidden;}
 .tab-index{margin-bottom: 30px;}
 .tab-index li a{text-transform: uppercase; font-size: 14px; font-weight: bold; color: #0072AB}
-.headline{font-size: 24px; text-transform: uppercase; font-weight: 400; color: #182f5b; text-align: center; margin-bottom: 10px; font-family: MontserratSemiBold; background: url(../images/title-service.png) no-repeat center bottom;
+.headline{font-size: 24px; text-transform: uppercase; font-weight: 400; color: #182f5b; text-align: center; margin-bottom: 10px; font-family: MontserratSemiBold; background: url(../../../images/guest/title-service.png) no-repeat center bottom;
     padding-bottom: 25px;}
 .reason-why{background: #fff;} 
 .text-desc{font-size: 38px; color: #8cc457; font-family: UTMYenTu; text-align: center;}

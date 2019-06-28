@@ -15,7 +15,8 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer(
-            ['guest.layouts.partials.header.*'],
+            ['guest.layouts.partials.header.*',
+                'admin.common.*'],
             'App\Http\ViewComposers\ProductComposer'
         );
         //Build data tag
@@ -27,7 +28,7 @@ class ComposerServiceProvider extends ServiceProvider
             'App\Http\ViewComposers\BlogComposer');
 
         //Build data app info
-        View::composer(['guest.*'],
+        View::composer(['guest.*','admin.layouts.*'],
             'App\Http\ViewComposers\AppInfoComposer');
 
         View::composer(['admin.layouts.partials.*'],

@@ -49,6 +49,12 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
+                                            <label class="col-md-2 col-form-label" for="text-input">Loại Thiết Kế</label>
+                                            <div class="col-md-10">
+                                                @include('admin.common.__select_design_type',['selectName' => 'design_type_id'])
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
                                             <label class="col-md-2 col-form-label" for="text-input">Công khai thiết kế</label>
                                             <div class="col-md-10">
                                                 <label class="switch switch-label switch-outline-primary-alt">

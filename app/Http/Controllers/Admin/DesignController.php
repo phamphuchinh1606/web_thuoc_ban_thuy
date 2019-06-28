@@ -17,7 +17,6 @@ class DesignController extends Controller
     }
 
     public function store(Request $request){
-        $request->design_type_id = 1;
         $this->productService->createProduct($request);
         return redirect()->route('admin.design.index');
 

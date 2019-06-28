@@ -7,6 +7,7 @@
     <meta name="description" content="CoreUI - Open Source Bootstrap Admin Template">
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
+    <link id="favicon" rel="shortcut icon" href="{{\App\Common\ImageCommon::showImage($appInfo->app_src_icon)}}" type="image/x-icon" />
     <!-- CSRF Token -->
     <meta name="_token" content="{{ csrf_token() }}">
     <title>@yield('head.title','Quan ly thang may')</title>

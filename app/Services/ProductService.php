@@ -98,6 +98,8 @@ class ProductService extends BaseService{
         $params['productCode'] = $request->product_code;
         $params['vendorId'] = $request->vendor;
         $params['productTypeId'] = $request->product_type;
+        $params['equipmentTypeId'] = $request->equipment_type_id;
+        $params['designTypeId'] = $request->design_type_id;
         $params['productPrice'] = $request->product_price == null ? 0 : $request->product_price;
         $params['productCostPrice'] = $request->product_cost_price == null ? 0 : $request->product_cost_price;
         $params['productComparePrice'] = $request->product_compare_price == null ? 0 : $request->product_compare_price;
@@ -136,6 +138,8 @@ class ProductService extends BaseService{
         $params['productCode'] = $request->product_code;
         $params['vendorId'] = $request->vendor;
         $params['productTypeId'] = $request->product_type;
+        $params['equipmentTypeId'] = $request->equipment_type_id;
+        $params['designTypeId'] = $request->design_type_id;
         $params['productPrice'] = $request->product_price == null ? 0 : $request->product_price;
         $params['productCostPrice'] = $request->product_cost_price == null ? 0 : $request->product_cost_price;
         $params['productComparePrice'] = $request->product_compare_price == null ? 0 : $request->product_compare_price;
@@ -186,6 +190,14 @@ class ProductService extends BaseService{
 
     public function getListProductService($limit = 5){
         return $this->productLogic->getListProductServiceNew($limit);
+    }
+
+    public function updateStepView($productId){
+        $product = $this->productLogic->getProduct($productId);
+        if(isset($product)){
+            $product->view_num = $product->view_num+1;
+            $this->productLogic->save($product);
+        }
     }
 
     public function delete($productId){

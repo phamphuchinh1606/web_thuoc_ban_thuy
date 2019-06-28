@@ -17,7 +17,6 @@ class EquipmentController extends Controller
     }
 
     public function store(Request $request){
-        $request->equipment_type_id = 1;
         $this->productService->createProduct($request);
         return redirect()->route('admin.equipment.index');
 

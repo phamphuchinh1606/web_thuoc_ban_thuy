@@ -292,6 +292,12 @@ class ProductLogic extends BaseLogic{
                 if(isset($params['productTypeId'])){
                     $product->product_type_id = $params['productTypeId'];
                 }
+                if(isset($params['equipmentTypeId'])){
+                    $product->equipment_type_id = $params['equipmentTypeId'];
+                }
+                if(isset($params['designTypeId'])){
+                    $product->design_type_id = $params['designTypeId'];
+                }
                 $product->product_price = $params['productPrice'];
                 if(isset($params['productCostPrice'])){
                     $product->product_cost_price = $params['productCostPrice'];

@@ -49,6 +49,12 @@
                                             </div>
                                         </div>
                                         <div class="form-group row">
+                                            <label class="col-md-2 col-form-label" for="text-input">Loại Thiết Bị</label>
+                                            <div class="col-md-10">
+                                                @include('admin.common.__select_equipment_type',['selectName' => 'equipment_type_id'])
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
                                             <label class="col-md-2 col-form-label" for="text-input">Công khai thiết bị</label>
                                             <div class="col-md-10">
                                                 <label class="switch switch-label switch-outline-primary-alt">
