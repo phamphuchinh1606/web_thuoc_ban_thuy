@@ -45,6 +45,6 @@ Route::group(['prefix' => 'admin'], function () {
 //    return view('guest.blog.blog_detail');
 //})->name('blog_detail');
 //
-//Route::get('/gia-cong-co-khi', function () {
-//    return view('guest.outsource.out_source');
-//})->name('out_source');
+Route::get('/gia-cong-co-khi', function () {
+    return view('guest.outsource.out_source');
+})->name('out_source');

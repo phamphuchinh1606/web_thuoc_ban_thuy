@@ -43,6 +43,10 @@ class ProductTypeService extends BaseService{
         return $this->productTypeLogic->findId($productTypeId);
     }
 
+    public function findSlug($slug){
+        return $this->productTypeLogic->findSlug($slug);
+    }
+
     public function getAll(){
         $listProductType = $this->productTypeLogic->getAll();
         foreach ($listProductType as $productType){

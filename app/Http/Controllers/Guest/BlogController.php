@@ -14,8 +14,8 @@ class BlogController extends Controller
         ]);
     }
 
-    public function detail($slug = null, $id){
-        $blog = $this->blogService->findId($id);
+    public function detail($slug = null){
+        $blog = $this->blogService->findSlug($slug);
         return view('guest.blog.blog_detail',[
             'blog' => $blog
         ]);

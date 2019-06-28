@@ -163,13 +163,21 @@ class ProductService extends BaseService{
     public function getInfoProduct($productId){
         $product = $this->productLogic->getProductInfo($productId);
         if(isset($product->id)){
-            $product->images = $this->productImageLogic->getListImageByProductId($productId);
+            $product->images = $this->productImageLogic->getListImageByProductId($product->id);
         }
         return $product;
     }
 
-    public function getListProductSameType($productId,$productTypeId){
-        return $this->productLogic->getListProductSameType($productId,$productTypeId);
+    public function getInfoProductBySlug($slug){
+        $product = $this->productLogic->getProductInfoBySlug($slug);
+        if(isset($product->id)){
+            $product->images = $this->productImageLogic->getListImageByProductId($product->id);
+        }
+        return $product;
+    }
+
+    public function getListProductSameType($productId,$product){
+        return $this->productLogic->getListProductSameType($productId,$product);
     }
 
     public function getListProductHot($limit = 5){
@@ -203,6 +211,28 @@ class ProductService extends BaseService{
         return $products;
     }
 
+    public function getListProductByEquipmentType($equipmentTypeId, $sortBy, $searchInfo){
+        if($equipmentTypeId == null){
+            $products = $this->getAllEquipment($searchInfo,$sortBy);
+        }else{
+            $searchInfo = new \StdClass();
+            $searchInfo->equipment_type_id = $equipmentTypeId;
+            $products = $this->productLogic->getListProductByType($searchInfo,$sortBy);
+        }
+        return $products;
+    }
+
+    public function getListProductByDesignType($designTypeId, $sortBy, $searchInfo){
+        if($designTypeId == null){
+            $products = $this->getAllDesign($searchInfo,$sortBy);
+        }else{
+            $searchInfo = new \StdClass();
+            $searchInfo->design_type_id = $designTypeId;
+            $products = $this->productLogic->getListProductByType($searchInfo,$sortBy);
+        }
+        return $products;
+    }
+
     public function getListProjectBySearch($sortBy, $searchInfo){
         $products = $this->getAllProductService($searchInfo,$sortBy);
         return $products;
@@ -210,12 +240,21 @@ class ProductService extends BaseService{
 
     public function createListProductApi($listProductInfo){
         foreach ($listProductInfo as $product){
-
+            $params = [];
             $params['productName'] = $product->product_name;
             $params['productTitle'] = $product->product_name;
             $params['productCode'] = $product->product_code;
             $params['productImage'] = $product->product_image;
             $params['isPublic'] = Constant::$PUBLIC_FLG_ON;
+            if(isset($product->product_type_id)){
+                $params['productTypeId'] = $product->product_type_id;
+            }
+            if(isset($product->equipment_type_id)){
+                $params['equipmentTypeId'] = $product->equipment_type_id;
+            }
+            if(isset($product->design_type_id)){
+                $params['designTypeId'] = $product->design_type_id;
+            }
             $productInsert = $this->productLogic->createProduct($params);
             if($product != null){
                 $productId = $productInsert->id;

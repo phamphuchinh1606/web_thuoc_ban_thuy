@@ -84,6 +84,12 @@
                             Thông tin giới thiệu
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{route('admin.setting.app_out_source.show')}}">
+                            <i class="nav-icon icon-wallet"></i>
+                            Thông tin gia công
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li class="nav-item">

@@ -42,9 +42,9 @@
                                                     <th class="sorting_asc">
                                                         Số Thứ Tự
                                                     </th>
-{{--                                                    <th class="sorting">--}}
-{{--                                                        Icon Danh Mục--}}
-{{--                                                    </th>--}}
+                                                    <th class="sorting">
+                                                        Icon Danh Mục
+                                                    </th>
                                                     <th class="sorting">
                                                         Tên Danh Mục
                                                     </th>
@@ -60,9 +60,9 @@
                                                         <td class="sorting_1">
                                                             {{$index + 1}}
                                                         </td>
-{{--                                                        <td>--}}
-{{--                                                            <img src="{{asset(Constant::$PATH_URL_UPLOAD_IMAGE.$productType->image_icon)}}" width="20" height="20"/>--}}
-{{--                                                        </td>--}}
+                                                        <td>
+                                                            <img src="{{\App\Common\ImageCommon::showImage($productType->image_icon)}}" width="50" height="50"/>
+                                                        </td>
                                                         <td>
                                                             {{$productType->product_type_name}}
                                                         </td>

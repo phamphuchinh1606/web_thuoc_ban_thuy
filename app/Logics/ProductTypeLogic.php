@@ -65,6 +65,10 @@ class ProductTypeLogic extends BaseLogic{
         return ProductType::find($productTypeId);
     }
 
+    public function findSlug($slug){
+        return ProductType::where('slug',$slug)->first();
+    }
+
     public function delete($productTypeId){
         $productType = ProductType::find($productTypeId);;
         if(isset($productType)){

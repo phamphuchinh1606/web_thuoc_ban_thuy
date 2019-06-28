@@ -55,7 +55,46 @@ class ProductController extends Controller
 
     public function loadAllProduct(){
         ini_set('max_execution_time', 600);
-        $urlProductAll = "http://saonamviet.net/san-pham.html";
+        $urlProductAll = "http://saonamviet.net/san-pham";
+        $urlEquipmentAll = "http://saonamviet.net/san-pham/thiet-bi";
+        $urlDesignAll = "http://saonamviet.net/san-pham/thiet-tri";
+
+        $listProductType = $this->productTypeService->getAll();
+        $listEquipmentType = $this->equipmentService->getAll();
+        $listDesignType = $this->designService->getAll();
+        $listProductInfo = [];
+        foreach ($listProductType as $productType){
+            $urlProductType = $urlProductAll.'/'.$productType->slug;
+            $listProductInfoByType = $this->getProductAll($urlProductType);
+            foreach ($listProductInfoByType as $productInfo){
+                $productInfo->product_type_id = $productType->id;
+                $productInfo->product_type_name = $productType->product_type_name;
+                $listProductInfo[] = $productInfo;
+            }
+        }
+        foreach ($listEquipmentType as $productType){
+            $urlProductType = $urlEquipmentAll.'/'.$productType->slug;
+            $listProductInfoByType = $this->getProductAll($urlProductType);
+            foreach ($listProductInfoByType as $productInfo){
+                $productInfo->equipment_type_id = $productType->id;
+                $productInfo->equipment_type_name = $productType->equipment_type_name;
+                $listProductInfo[] = $productInfo;
+            }
+        }
+        foreach ($listDesignType as $productType){
+            $urlProductType = $urlDesignAll.'/'.$productType->slug;
+            $listProductInfoByType = $this->getProductAll($urlProductType);
+            foreach ($listProductInfoByType as $productInfo){
+                $productInfo->design_type_id = $productType->id;
+                $productInfo->design_type_name = $productType->design_type_name;
+                $listProductInfo[] = $productInfo;
+            }
+        }
+        $this->productService->createListProductApi($listProductInfo);
+        return redirect()->route('admin.product.index');
+    }
+
+    private function getProductAll($urlProductAll){
         $urlHostToyota = "http://saonamviet.net";
         $finder = CurlCommon::curl_get_page_to_dom_xpath($urlProductAll);
         $nodePagings = $finder->query("//ul[@class='pagination']");
@@ -64,6 +103,9 @@ class ProductController extends Controller
             $nodePaging = $nodePagings[0];
             $listPages = $nodePaging->getElementsByTagName('li');
             $listPageNumber = [];
+            if(count($listPages) <= 0){
+                $listPageNumber[] = 1;
+            }
             foreach ($listPages as $liPage){
                 $listTaga = $liPage->getElementsByTagName('a');
                 if(count($listTaga) > 0){
@@ -73,45 +115,46 @@ class ProductController extends Controller
                     }
                 }
             }
-            foreach ($listPageNumber as $pageNumber){
-                if($pageNumber != "1"){
-                    $finder = CurlCommon::curl_get_page_to_dom_xpath($urlProductAll."&page=$pageNumber");
-                }
-                $nodeUlProducts = $finder->query("//div[@class='items-product col-md-4 col-sm-4 col-xs-6']");
-                if(count($nodeUlProducts) > 0){
-                    foreach ($nodeUlProducts as $nodeUlProduct){
-                        $listLiProduct = $nodeUlProduct->getElementsByTagName('div');
-                        $productInfo = new \StdClass();
-                        foreach ($listLiProduct as $liProduct){
-                            $className = $liProduct->getAttribute("class");
-                            if("_img" == $className){
-                                $nodeImages = $liProduct->getElementsByTagName('img');
-                                if(count($nodeImages) > 0){
-                                    $productInfo->product_image = $urlHostToyota.'/'.$nodeImages[0]->getAttribute('src');
-                                }
+        }else{
+            $listPageNumber[] = 1;
+        }
+        foreach ($listPageNumber as $pageNumber){
+            if($pageNumber != "1"){
+                $finder = CurlCommon::curl_get_page_to_dom_xpath($urlProductAll."&page=$pageNumber");
+            }
+            $nodeUlProducts = $finder->query("//div[@class='items-product col-md-4 col-sm-4 col-xs-6']");
+            if(count($nodeUlProducts) > 0){
+                foreach ($nodeUlProducts as $nodeUlProduct){
+                    $listLiProduct = $nodeUlProduct->getElementsByTagName('div');
+                    $productInfo = new \StdClass();
+                    foreach ($listLiProduct as $liProduct){
+                        $className = $liProduct->getAttribute("class");
+                        if("_img" == $className){
+                            $nodeImages = $liProduct->getElementsByTagName('img');
+                            if(count($nodeImages) > 0){
+                                $productInfo->product_image = $urlHostToyota.'/'.$nodeImages[0]->getAttribute('src');
                             }
-                            if("_img_prd" == $className){
-                                $nodeH3s = $liProduct->getElementsByTagName('h3');
-                                if(count($nodeH3s) > 0){
-                                    $nodeProductNames = $nodeH3s[0]->getElementsByTagName('a');
-                                    if(count($nodeProductNames) > 0){
-                                        $productInfo->product_name = $nodeProductNames[0]->nodeValue;
-                                        $linkProduct = $urlHostToyota.'/'.$nodeProductNames[0]->getAttribute('href');
-                                    }
+                        }
+                        if("_img_prd" == $className){
+                            $nodeH3s = $liProduct->getElementsByTagName('h3');
+                            if(count($nodeH3s) > 0){
+                                $nodeProductNames = $nodeH3s[0]->getElementsByTagName('a');
+                                if(count($nodeProductNames) > 0){
+                                    $productInfo->product_name = $nodeProductNames[0]->nodeValue;
+                                    $linkProduct = $urlHostToyota.'/'.$nodeProductNames[0]->getAttribute('href');
                                 }
                             }
                         }
+                    }
 
-                        if(isset($linkProduct)){
-                            $productInfo = $this->getProductInfo($linkProduct,$productInfo);
-                            $listProductInfo[] = $productInfo;
-                        }
+                    if(isset($linkProduct)){
+                        $productInfo = $this->getProductInfo($linkProduct,$productInfo);
+                        $listProductInfo[] = $productInfo;
                     }
                 }
             }
         }
-        $this->productService->createListProductApi($listProductInfo);
-        return redirect()->route('admin.product.index');
+        return $listProductInfo;
     }
 
     private function getProductInfo($urlProduct, $productInfo){

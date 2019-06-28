@@ -184,15 +184,41 @@ class ProductLogic extends BaseLogic{
         return $product;
     }
 
-    public function getListProductSameType($productId,$productTypeId, $limit = 8){
-        return Product::where('id','<>',$productId)->where('product_type_id',$productTypeId)
-            ->where('is_delete',Constant::$DELETE_FLG_OFF)->limit($limit)->get();
+    public function getProductInfoBySlug($slug){
+        $product = Db::table(TableNameDB::$TableProduct.' as product')
+            ->leftjoin(TableNameDB::$TableProductType.' as type', 'product.product_type_id','=','type.id')
+            ->leftjoin(TableNameDB::$TableVendor.' as vendor', 'product.vendor_id' ,'=' ,'vendor.id')
+            ->leftjoin(TableNameDB::$TableEquipmentType.' as equipment_type', 'product.equipment_type_id','=','equipment_type.id')
+            ->leftjoin(TableNameDB::$TableDesignType.' as design_type', 'product.design_type_id','=','design_type.id')
+            ->where('product.slug', $slug)
+            ->select('product.*', 'type.product_type_name', 'vendor.vendor_name', 'equipment_type.equipment_type_name', 'design_type.design_type_name')
+            ->first();
+        return $product;
+    }
+
+    public function getListProductSameType($productId,$product, $limit = 8){
+        $query = Product::where('id','<>',$productId);
+        $query->where('is_delete',Constant::$DELETE_FLG_OFF);
+        if(isset($product->product_type_id)){
+            $query->whereNotNull('product_type_id');
+            $query->orderByRaw("case when product_type_id = $product->product_type_id then 1 else 0 end desc");
+        }
+        if(isset($product->equipment_type_id)){
+            $query->whereNotNull('equipment_type_id');
+            $query->orderByRaw("case when equipment_type_id = $product->equipment_type_id    then 1 else 0 end desc");
+        }
+        if(isset($product->design_type_id)){
+            $query->whereNotNull('design_type_id');
+            $query->orderByRaw("case when design_type_id = $product->design_type_id then 1 else 0 end desc");
+        }
+        return $query->limit($limit)->get();
+
     }
 
     public function getListProductHot($limit = 5){
         $products = Product::where('products.is_delete', Constant::$DELETE_FLG_OFF)
             ->where('products.is_public',Constant::$PUBLIC_FLG_ON)
-            ->orderBy('qty_sale_order','desc')
+            ->orderBy('view_num','desc')
             ->limit($limit)->get();
         return $products;
     }
@@ -214,7 +240,7 @@ class ProductLogic extends BaseLogic{
             if(isset($params['vendorId'])){
                 $product->vendor_id = $params['vendorId'];
             }
-            if(isset($params['vendorId'])){
+            if(isset($params['productTypeId'])){
                 $product->product_type_id = $params['productTypeId'];
             }
             if(isset($params['productPrice'])){
@@ -314,7 +340,7 @@ class ProductLogic extends BaseLogic{
     }
 
     //Logic Guest
-    public function getListProductByProductType($productTypeId, $sortBy, $limitPage = 12){
+    public function getListProductByProductType($productTypeId, $sortBy, $limitPage = 20){
         $query = Db::table(TableNameDB::$TableProduct.' as product')
             ->where('is_delete',Constant::$DELETE_FLG_OFF)
             ->where('is_public', Constant::$PUBLIC_FLG_ON)
@@ -324,6 +350,68 @@ class ProductLogic extends BaseLogic{
                     ->where('id',$productTypeId)
                     ->orWhere('parent_id',$productTypeId);
             });
+        if($sortBy != null){
+            switch ($sortBy){
+                case Constant::$SORT_BY_PRODUCT_CREATED_ASCENDING:
+                    $query->orderBy('created_at','asc');
+                    break;
+                case Constant::$SORT_BY_PRODUCT_CREATED_DESCENDING:
+                    $query->orderBy('created_at','desc');
+                    break;
+                case Constant::$SORT_BY_PRODUCT_PRICE_ASCENDING:
+                    $query->orderBy('product_price','asc');
+                    break;
+                case Constant::$SORT_BY_PRODUCT_PRICE_DESCENDING:
+                    $query->orderBy('product_price','desc');
+                    break;
+                case Constant::$SORT_BY_PRODUCT_TITLE_ASCENDING:
+                    $query->orderBy('product_name','asc');
+                    break;
+                case Constant::$SORT_BY_PRODUCT_TITLE_DESCENDING:
+                    $query->orderBy('product_name','desc');
+                    break;
+                case Constant::$SORT_BY_PRODUCT_BEST_SELLING:
+                    $query->orderBy('qty_sale_order','desc');
+                    break;
+                default:
+                    $query->orderBy('created_at','desc');
+                    break;
+            }
+        }else{
+            $query->orderBy('created_at','desc');
+        }
+        $products = $query->paginate($limitPage);
+        return $products;
+    }
+
+    public function getListProductByType($searchInfo, $sortBy, $limitPage = 20){
+        $query = Db::table(TableNameDB::$TableProduct.' as product')
+            ->where('is_delete',Constant::$DELETE_FLG_OFF)
+            ->where('is_public', Constant::$PUBLIC_FLG_ON);
+        if(isset($searchInfo->product_type_id)){
+            $query->whereIn('product_type_id',function($query) use ($searchInfo){
+                $query->select('id')
+                    ->from(TableNameDB::$TableProductType)
+                    ->where('id',$searchInfo->product_type_id)
+                    ->orWhere('parent_id',$searchInfo->product_type_id);
+            });
+        }
+        if(isset($searchInfo->equipment_type_id)){
+            $query->whereIn('equipment_type_id',function($query) use ($searchInfo){
+                $query->select('id')
+                    ->from(TableNameDB::$TableEquipmentType)
+                    ->where('id',$searchInfo->equipment_type_id)
+                    ->orWhere('parent_id',$searchInfo->equipment_type_id);
+            });
+        }
+        if(isset($searchInfo->design_type_id)){
+            $query->whereIn('design_type_id',function($query) use ($searchInfo){
+                $query->select('id')
+                    ->from(TableNameDB::$TableDesignType)
+                    ->where('id',$searchInfo->design_type_id)
+                    ->orWhere('parent_id',$searchInfo->design_type_id);
+            });
+        }
         if($sortBy != null){
             switch ($sortBy){
                 case Constant::$SORT_BY_PRODUCT_CREATED_ASCENDING:

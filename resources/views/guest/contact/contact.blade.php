@@ -16,46 +16,70 @@
                                 <div class="khung">
                                     <!-- <div class="main-title"><span class="t-transf">Liên hệ</span></div> -->
                                     <div class="form_contact">
-                                        <p></p><p>Văn phòng &amp; Nhà xưởng :&nbsp;26 Đường số 2 Vạn Phúc City, QL. 13, Hiệp Bình Phước, Q. Thủ Đức, TP. Hồ Chí Minh</p>
+                                        <p></p>
+                                        <p>Văn phòng &amp; Nhà xưởng :&nbsp;{{$appInfo->app_address}}</p>
 
-                                        <p>Hotline : <span style="font-family: arial, helvetica, sans-serif;">0907 130 484 - 0938957362</span><br>
-                                            Email&nbsp; &nbsp;: kynghetoanthang@gmail.com</p>
+                                        <p>
+                                            Hotline : <span
+                                                    style="font-family: arial, helvetica, sans-serif;">{{$appInfo->app_fax}}</span><br>
+                                            Điện Thoại : <span
+                                                    style="font-family: arial, helvetica, sans-serif;">{{$appInfo->app_phone}}</span><br>
+                                            Email&nbsp; &nbsp;: {{$appInfo->app_email}}</p>
                                         <p></p>
                                     </div>
                                     <div class="row">
                                         <div class="khung_phai col-md-6 col-sm-12 col-xs-12">
-                                            <div style="padding-bottom:50%;position:relative;width:100%;height: 0"><div id="map_canvas" data-coor="" data-zoom="14" style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div></div>		      	</div>
+                                            <div style="padding-bottom:50%;position:relative;width:100%;height: 0">
+                                                <div id="map_canvas" data-coor="" data-zoom="14"
+                                                     style="position: absolute;top: 0;left: 0;width: 100%;height: 100%;"></div>
+                                            </div>
+                                        </div>
 
                                         <div class="khung_trai col-md-6 col-sm-12 col-xs-12">
-
+                                            @if(\Session::has('message'))
+                                                <div class="alert alert-success"> {{ \Session::get('message') }}</div>
+                                            @endif
                                             <div class="row form_lh">
-                                                <form method="post" name="frm" action="lien-he.html" enctype="multipart/form-data">
+                                                <form method="post" name="frm" action="{{route('contact.send_contact')}}"
+                                                      enctype="multipart/form-data">
+                                                    @csrf
                                                     <!-- <div class="row"> -->
                                                     <div class="left-form col-md-5 col-sm-5 col-xs-12">
                                                         <p class="line-input ften">
-                                                            <input name="ten" type="text" class="tflienhe" id="ten" placeholder="Họ và tên">
+                                                            <input name="guest_name" type="text" class="tflienhe" id="ten"
+                                                                   placeholder="Họ và tên" required>
                                                         </p>
                                                         <p class="line-input fdiachi">
-                                                            <input name="diachi" type="text" class="tflienhe" id="diachi" placeholder="Địa Chỉ ">
+                                                            <input name="guest_address" type="text" class="tflienhe"
+                                                                   id="diachi" placeholder="Địa Chỉ " required>
                                                         </p>
                                                         <p class="line-input fdienthoai">
-                                                            <input name="dienthoai" type="text" class="tflienhe" id="dienthoai" placeholder="Điện Thoại ">
+                                                            <input name="guest_phone" type="text" class="tflienhe"
+                                                                   id="dienthoai" placeholder="Điện Thoại " required>
                                                         </p>
                                                         <p class="line-input femail">
-                                                            <input name="email" type="text" class="tflienhe" id="email" placeholder="Email">
+                                                            <input name="guest_email" type="text" class="tflienhe" id="email"
+                                                                   placeholder="Email" required>
                                                         </p>
                                                         <p class="line-input ftieude">
-                                                            <input name="tieude" type="text" class="tflienhe" id="tieude" placeholder="Chủ đề">
+                                                            <input name="guest_title" type="text" class="tflienhe"
+                                                                   id="tieude" placeholder="Chủ đề" required>
                                                         </p>
                                                     </div>
                                                     <div class="right-form col-md-7 col-sm-7 col-xs-12">
                                                         <p class="line-input fnoidung">
-                                                            <textarea name="noidung" cols="50" rows="5" class="ta_noidung" id="noidung" placeholder="Nội dung"></textarea>
+                                                            <textarea name="guest_content" cols="50" rows="5"
+                                                                      class="ta_noidung" id="noidung"
+                                                                      placeholder="Nội dung" required></textarea>
                                                         </p>
                                                         <div class="clear"></div>
                                                         <p class="line-input input-button">
-                                                            <button type="button" class="button-contact btn btn-primary" onclick="js_submit12();"> Gửi liên hệ</button>
-                                                            <button type="reset" class="button-contact btn btn-danger">Reset</button>
+                                                            <button type="submit" class="button-contact btn btn-primary"
+                                                                    > Gửi liên hệ
+                                                            </button>
+                                                            <button type="reset" class="button-contact btn btn-danger">
+                                                                Reset
+                                                            </button>
                                                         </p>
                                                     </div>
                                                     <div class="clear"></div>

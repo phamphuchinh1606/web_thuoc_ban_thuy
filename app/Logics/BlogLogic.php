@@ -57,6 +57,10 @@ class BlogLogic extends BaseLogic{
         return Blog::find($blogId);
     }
 
+    public function findSlug($slug){
+        return Blog::where('slug',$slug)->first();
+    }
+
     public function delete($blogId){
         $blog = Blog::find($blogId);;
         if(isset($blog)){

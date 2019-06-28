@@ -13,4 +13,4 @@
 
 
 Route::get('/tin-tuc','BlogController@index')->name('blog');
-Route::get('/tin-tuc/chi-tiet/{slug?}_{id}','BlogController@detail')->name('blog.detail');
+Route::get('/tin-tuc/{slug}','BlogController@detail')->name('blog_detail');

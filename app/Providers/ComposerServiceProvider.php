@@ -15,11 +15,7 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer(
-            ['admin.common.__select_product_type', 'admin.common.__sele,ct_vendor',
-                'guest.home.partials.main-top-partials.__vertical_menu',
-                'guest.layouts.partials.header.__top_menu',
-                'guest.blog.partials.__left_column',
-                'guest.product.partials.*'],
+            ['guest.layouts.partials.header.*'],
             'App\Http\ViewComposers\ProductComposer'
         );
         //Build data tag

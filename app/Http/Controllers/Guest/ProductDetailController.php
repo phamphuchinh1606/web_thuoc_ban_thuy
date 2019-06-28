@@ -11,12 +11,12 @@ use StdClass;
 
 class ProductDetailController extends Controller
 {
-    public function index($slug = null, $id = 1){
-        $product = $this->productService->getInfoProduct($id);
+    public function index($slug = null){
+        $product = $this->productService->getInfoProductBySlug($slug);
         $productHots = $this->productService->getListProductHot(4);
         $productSameTypes = new StdClass();
         if(isset($product)){
-            $productSameTypes = $this->productService->getListProductSameType($product->id,$product->product_type_id);
+            $productSameTypes = $this->productService->getListProductSameType($product->id,$product);
         }
         return view('guest.product.product_detail',[
             'product' => $product,

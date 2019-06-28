@@ -18,6 +18,8 @@ class CreateContactsTable extends Migration
             $table->string('guest_name')->nullable(true);
             $table->string('guest_phone')->nullable(true);
             $table->string('guest_email')->nullable(true);
+            $table->string('guest_title')->nullable(true);
+            $table->string('guest_address')->nullable(true);
             $table->text('guest_content')->nullable(true);
             $table->boolean('is_read')->default(0);
             $table->string('status')->nullable(true);

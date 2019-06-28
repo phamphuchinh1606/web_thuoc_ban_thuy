@@ -5,7 +5,7 @@ namespace App\Http\ViewComposers;
 use Illuminate\View\View;
 use App\Services\ProductTypeService;
 use App\Services\VendorService;
-use App\Services\ProductService;
+use App\Services\{ProductService, EquipmentTypeService, DesignTypeService};
 
 class ProductComposer
 {
@@ -16,11 +16,19 @@ class ProductComposer
      */
     protected $productTypeService;
 
+    protected $equipmentTypeService;
+
+    protected $designTypeService;
+
     protected $productService;
 
     protected $vendorService;
 
     private static $productTypes;
+
+    protected static $equipmentTypes;
+
+    protected static $designTypes;
 
     private static $vendors;
 
@@ -32,12 +40,15 @@ class ProductComposer
      * @param  UserRepository  $users
      * @return void
      */
-    public function __construct(ProductTypeService $productTypeService, VendorService $vendorService, ProductService $productService)
+    public function __construct(ProductTypeService $productTypeService, VendorService $vendorService, ProductService $productService,
+                                EquipmentTypeService $equipmentTypeService , DesignTypeService $designTypeService)
     {
         // Dependencies automatically resolved by service container...
         $this->productTypeService = $productTypeService;
         $this->vendorService = $vendorService;
         $this->productService = $productService;
+        $this->equipmentTypeService = $equipmentTypeService;
+        $this->designTypeService = $designTypeService;
     }
 
     /**
@@ -51,17 +62,23 @@ class ProductComposer
         if(!isset(self::$productTypes)){
             self::$productTypes =  $this->productTypeService->getAllByTree();
         }
-
-        if(!isset(self::$vendors)){
-            self::$vendors =  $this->vendorService->getAll();
+        if(!isset(self::$equipmentTypes)){
+            self::$equipmentTypes =  $this->equipmentTypeService->getAllByTree();
+        }
+        if(!isset(self::$designTypes)){
+            self::$designTypes =  $this->designTypeService->getAllByTree();
         }
 
-        if(!isset(self::$productHosts)){
-            self::$productHosts = $this->productService->getListProductHot();
-        }
+//        if(!isset(self::$vendors)){
+//            self::$vendors =  $this->vendorService->getAll();
+//        }
+//
+//        if(!isset(self::$productHosts)){
+//            self::$productHosts = $this->productService->getListProductHot();
+//        }
 
         $view->with('productTypes', self::$productTypes)
-                ->with('vendors',self::$vendors)
-                ->with('productHots', self::$productHosts);
+                ->with('equipmentTypes',self::$equipmentTypes)
+                ->with('designTypes', self::$designTypes);
     }
 }

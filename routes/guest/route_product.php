@@ -13,5 +13,5 @@
 
 //Route::get('/product-detail-json/quick-view/{slug?}_{id}','ProductDetailController@quickViewProduct')->name('product.quick_view');
 //Route::get('/search','ProductDetailController@search')->name('search_product');
-Route::get('/chi-tiet-san-pham/{slug?}_{id}','ProductDetailController@index')->name('product_detail');
+Route::get('/chi-tiet-san-pham/{slug?}','ProductDetailController@index')->name('product_detail');
 Route::get('/san-pham/{slug}_{id}.js','ProductDetailController@quickViewProduct')->name('product.quick_view');

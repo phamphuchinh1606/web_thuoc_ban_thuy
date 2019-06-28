@@ -79,6 +79,18 @@ class BlogService extends BaseService{
         return $blog;
     }
 
+    public function findSlug($slug){
+        $blog = $this->blogLogic->findSlug($slug);
+        if(isset($blog)){
+            $blog->post_date = AppCommon::dateFormat($blog->post_date,'m/d/Y');
+            $blog->str_post_date = AppCommon::dateFormat($blog->post_date,'d/m/Y');
+            if($blog->is_public == Constant::$PUBLIC_FLG_ON){
+                $blog->is_check_public = "checked='checked'";
+            }
+        }
+        return $blog;
+    }
+
     public function delete($blogId){
         $this->blogLogic->delete($blogId);
     }

@@ -1141,7 +1141,7 @@ box-sizing: border-box;}
 
     left: 0px;
 
-    top: 10%;
+    top: 80%;
 
     z-index: 9999!important;
 
@@ -1345,7 +1345,7 @@ box-sizing: border-box;}
   }
 
 }
-
+.product_image{max-height: 250px;min-height: 250px}
 .moulde-left h3{margin:0;background:#3D4454;padding:10px 0;font-size:18px;color:#fff;text-transform:uppercase;text-align: center;font-family: 'Open Sans', sans-serif;}
 ._nav_left{padding: 10px; border: solid 1px #eee; border-top: none;}
 @media (min-width: 1200px){
@@ -1358,6 +1358,7 @@ box-sizing: border-box;}
 @media screen and (max-width:1199px){
    #wrapper, #block-about, #product-list, #block-news, #footer{width: 100%; padding: 0px 10px;}
    .bg-white{width: 100%;}
+
 }
 
 @media screen and (min-width:1024px) and (max-width:1199px){
@@ -1394,7 +1395,8 @@ box-sizing: border-box;}
 	.khung_trai{margin-top: 20px;}
     .danhmucsp ul li{width: 30%;}
     .img-news, .info-news{width: 100%;}  
-    .list ul li{width: 100%;}  
+    .list ul li{width: 100%;}
+    .product_image{max-height: 180px;min-height: 170px}
 }
 @media screen and (max-width:600px){   
 }

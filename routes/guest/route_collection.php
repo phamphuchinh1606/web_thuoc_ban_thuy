@@ -11,7 +11,11 @@
 |
 */
 
-Route::get('/tat-ca-san-pham','CollectionController@index')->name('collection_all');
-Route::get('/san-pham/{slug?}_{id?}','CollectionController@index')->name('collection');
+Route::get('/san-pham','CollectionController@index')->name('collection_all');
+Route::get('/san-pham/thiet-bi','CollectionController@indexEquipment')->name('collection_equipment_all');
+Route::get('/san-pham/thiet-tri','CollectionController@indexDesign')->name('collection_design_all');
+Route::get('/san-pham/thiet-bi/{slug}','CollectionController@indexEquipment')->name('collection_equipment');
+Route::get('/san-pham/thiet-tri/{slug}','CollectionController@indexDesign')->name('collection_design');
+Route::get('/san-pham/{slug?}','CollectionController@index')->name('collection');
 Route::get('/tim-kiem','CollectionController@search')->name('search');
 Route::get('/tim-kiem/all/ajax','CollectionController@searchAjax')->name('search_ajax');

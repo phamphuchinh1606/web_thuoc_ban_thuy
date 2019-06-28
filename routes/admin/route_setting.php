@@ -36,5 +36,10 @@ Route::post('/setting/app-info/update','SettingController@updateAppInfo')->name(
 Route::get('/setting/app-about','SettingController@appAboutUpdate')->name('setting.app_about.show');
 Route::post('/setting/app-about/update','SettingController@updateAboutAppInfo')->name('setting.app_about');
 
+//Setting Out Source Info
+Route::get('/setting/app-out-source','SettingController@appOutSourceUpdate')->name('setting.app_out_source.show');
+Route::post('/setting/app-out-source/update','SettingController@updateOutSourceAppInfo')->name('setting.app_out_source');
+
+
 
 

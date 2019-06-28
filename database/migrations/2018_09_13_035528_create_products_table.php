@@ -32,6 +32,7 @@ class CreateProductsTable extends Migration
             $table->bigInteger('product_qty')->default(0)->nullable(true);
             $table->bigInteger('qty_sale_order')->default(0)->nullable(true);
             $table->string('slug',255)->nullable(true);
+            $table->bigInteger('view_num')->default(0)->nullable(true);
             $table->integer('is_public')->default(0);
             $table->integer('is_delete')->default(0);
             $table->timestamps();

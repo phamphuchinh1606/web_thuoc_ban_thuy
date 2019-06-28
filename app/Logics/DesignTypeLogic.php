@@ -65,6 +65,10 @@ class DesignTypeLogic extends BaseLogic{
         return DesignType::find($productTypeId);
     }
 
+    public function findSlug($slug){
+        return DesignType::where('slug',$slug)->first();
+    }
+
     public function delete($productTypeId){
         $productType = DesignType::find($productTypeId);;
         if(isset($productType)){

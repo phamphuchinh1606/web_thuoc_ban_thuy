@@ -32,6 +32,8 @@ class ContactService extends BaseService{
         $params['GuestName'] = $request->guest_name;
         $params['GuestPhone'] = $request->guest_phone;
         $params['GuestEmail'] = $request->guest_email;
+        $params['GuestTitle'] = $request->guest_title;
+        $params['GuestAddress'] = $request->guest_address;
         $params['GuestContent'] = $request->guest_content;
         return $this->contactLogic->create($params);
     }

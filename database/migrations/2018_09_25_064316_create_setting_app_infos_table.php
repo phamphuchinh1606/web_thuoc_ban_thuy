@@ -22,6 +22,7 @@ class CreateSettingAppInfosTable extends Migration
             $table->string('app_email',100)->nullable(true);
             $table->string('app_facebook',255)->nullable(true);
             $table->string('app_address',255)->nullable(true);
+            $table->string('app_office_address',255)->nullable(true);
             $table->string('app_address_google_map',1000)->nullable(true);
             $table->string('app_title_chat_box',255)->nullable(true);
             $table->string('app_link_facebook_fanpage',1000)->nullable(true);
@@ -30,7 +31,8 @@ class CreateSettingAppInfosTable extends Migration
             $table->string('app_link_instagram',1000)->nullable(true);
             $table->string('app_make_product_video_one',1000)->nullable(true);
             $table->string('app_make_product_video_two',1000)->nullable(true);
-            $table->text('app_content',1000)->nullable(true);
+            $table->text('app_content',10000)->nullable(true);
+            $table->text('out_source_content',10000)->nullable(true);
             $table->text('about_content')->nullable(true);
             $table->timestamps();
         });

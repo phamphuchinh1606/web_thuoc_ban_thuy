@@ -2,7 +2,7 @@
 
 @extends('admin.layouts.master')
 
-@section('head.title','Thông tin giới thiệu')
+@section('head.title','Thông tin gia công cơ khí')
 
 @section('head.css')
     <link href="{{asset('css/admin/plugins/quill.snow.css')}}" rel="stylesheet">
@@ -18,16 +18,16 @@
         <div id="ui-view">
             <div class="row">
                 <div class="col-md-12">
-                    <form action="{{route('admin.setting.app_about')}}" method="post" enctype="multipart/form-data"
+                    <form action="{{route('admin.setting.app_out_source')}}" method="post" enctype="multipart/form-data"
                           id="form">
                         @csrf
                         <input type="hidden" value="{{$appInfo->id}}" name="app_id"/>
                         <div class="card list-image">
                             <div class="card-header">
-                                <i class="fa fa-align-justify"></i>Thông tin giới thiệu trang
+                                <i class="fa fa-align-justify"></i>Thông tin gia công cơ khí
                             </div>
                             <div class="card-body">
-                                <textarea class="form-control" id="summary-ckeditor" name="about_content" style="height: 400px">{{$appInfo->about_content}}</textarea>
+                                <textarea class="form-control" id="summary-ckeditor" name="out_source_content" style="height: 400px">{{$appInfo->out_source_content}}</textarea>
                                 <script src="{{ asset('ckeditor/ckeditor.js') }}"></script>
                                 <script>
                                     CKEDITOR.replace( 'summary-ckeditor', {

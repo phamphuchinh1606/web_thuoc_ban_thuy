@@ -44,29 +44,29 @@
                                                 </label>
                                             </div>
                                         </div>
-{{--                                        <div class="form-group row">--}}
-{{--                                            <label class="col-md-3 col-form-lable" for="">Icon Image</label>--}}
-{{--                                            <div class="col-md-3">--}}
-{{--                                                <div class="upload__area-image">--}}
-{{--                                                <span>--}}
-{{--                                                    <img id="imgAdd" src="http://beats-city.amagumolabs.io/images/upload/no_image_available.jpg">--}}
-{{--                                                    <label for="imageFileAdd">Upload image</label>--}}
-{{--                                                </span>--}}
-{{--                                                    <p><small>( width: 20px , height: 20px)</small></p>--}}
-{{--                                                </div>--}}
-{{--                                                <div class="form__upload image_icon">--}}
-{{--                                                    <div class="form-inline-simple">--}}
-{{--                                                        <input type="file" name="image_icon" class="form-control imgAnchorInput" id="imageFileAdd" onchange="loadFileImage(event)">--}}
-{{--                                                    </div>--}}
-{{--                                                    <script>--}}
-{{--                                                        var loadFileImage = function(event) {--}}
-{{--                                                            var output = document.getElementById('imgAdd');--}}
-{{--                                                            output.src = URL.createObjectURL(event.target.files[0]);--}}
-{{--                                                        };--}}
-{{--                                                    </script>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                        </div>--}}
+                                        <div class="form-group row">
+                                            <label class="col-md-3 col-form-lable" for="">Icon Image</label>
+                                            <div class="col-md-3">
+                                                <div class="upload__area-image">
+                                                <span>
+                                                    <img id="imgAdd" src="http://beats-city.amagumolabs.io/images/upload/no_image_available.jpg">
+                                                    <label for="imageFileAdd">Upload image</label>
+                                                </span>
+                                                    <p><small>( width: 20px , height: 20px)</small></p>
+                                                </div>
+                                                <div class="form__upload image_icon">
+                                                    <div class="form-inline-simple">
+                                                        <input type="file" name="image_icon" class="form-control imgAnchorInput" id="imageFileAdd" onchange="loadFileImage(event)">
+                                                    </div>
+                                                    <script>
+                                                        var loadFileImage = function(event) {
+                                                            var output = document.getElementById('imgAdd');
+                                                            output.src = URL.createObjectURL(event.target.files[0]);
+                                                        };
+                                                    </script>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="card-footer text-right">
                                         <button class="btn btn-sm btn-primary" type="submit">

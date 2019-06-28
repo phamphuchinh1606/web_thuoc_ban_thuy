@@ -43,6 +43,10 @@ class EquipmentTypeService extends BaseService{
         return $this->equipmentTypeLogic->findId($productTypeId);
     }
 
+    public function findSlug($slug){
+        return $this->equipmentTypeLogic->findSlug($slug);
+    }
+
     public function getAll(){
         $listProductType = $this->equipmentTypeLogic->getAll();
         foreach ($listProductType as $productType){

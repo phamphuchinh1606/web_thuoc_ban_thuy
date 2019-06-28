@@ -119,6 +119,7 @@ class SettingLogic extends BaseLogic{
                 $appInfo->app_email = $params['appEmail'];
                 $appInfo->app_facebook = $params['appFacebook'];
                 $appInfo->app_address = $params['appAddress'];
+                $appInfo->app_office_address = $params['appOfficeAddress'];
                 $appInfo->app_address_google_map = $params['appAddressGoogleMap'];
                 $appInfo->app_title_chat_box = $params['appTitleChatBox'];
                 $appInfo->app_link_facebook_fanpage = $params['appLinkFacebookFanpage'];

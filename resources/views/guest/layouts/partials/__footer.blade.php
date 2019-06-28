@@ -5,16 +5,16 @@
                 <div class="detailft">
                     <p>
                         <span style="color:#808080;">
-                            <span font-size:="" helvetica="">Địa chỉ: 75/11 Cống Lở, Phường 15, Quận Tân Bình, Thành phố Hồ Chí Minh</span>
+                            <span font-size:="" helvetica="">Địa chỉ: {{$appInfo->app_address}}</span>
                         </span>
                         <br style="box-sizing: border-box;"/>
-                        Văn phòng & Nhà xưởng : 26 Đường số 2 Vạn Phúc City, QL. 13, Hiệp Bình Phước, Q. Thủ Đức, TP. Hồ Chí Minh
+                        Văn phòng & Nhà xưởng : {{$appInfo->app_office_address}}
                     </p>
 
-                    <p>Hotline văn phòng : <span style="font-family: arial, helvetica, sans-serif;">(028) 6255 7711 - 0907 130 484</span>
+                    <p>Hotline văn phòng : <span style="font-family: arial, helvetica, sans-serif;">{{$appInfo->app_fax}} - {{$appInfo->app_phone}}</span>
                     </p>
 
-                    <p><span style="font-family: arial, helvetica, sans-serif;">Mail:  kynghetoanthang@gmail.com</span>
+                    <p><span style="font-family: arial, helvetica, sans-serif;">Mail:  {{$appInfo->app_email}}</span>
                     </p>
                 </div>
             </div>

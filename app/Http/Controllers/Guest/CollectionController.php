@@ -6,18 +6,60 @@ use Illuminate\Http\Request;
 
 class CollectionController extends Controller
 {
-    public function index($slug = null, $id = null, Request $request){
+    public function index($slug = null, Request $request){
 
         $productType = new \stdClass();
         $productType->id = '';
         $productType->product_type_name = "Tất cả sản phẩm";
-        if($id != null){
-            $productType = $this->productTypeService->findId($id);
+        if($slug != null){
+            $productType = $this->productTypeService->findSlug($slug);
         }
         $sortBy = null;
         if(isset($request->sort_by)) $sortBy = $request->sort_by;
         $searchInfo = $this->getSearchInfo($request, $productType);
-        $products = $this->productService->getListProductByProductType($id,$sortBy,$searchInfo);
+        $products = $this->productService->getListProductByProductType($productType->id,$sortBy,$searchInfo);
+        return view('guest.collection.collection',[
+            'products' => $products,
+            'productType' => $productType,
+            'sortBy' => $sortBy,
+            'searchInfo' => $searchInfo
+        ]);
+    }
+
+    public function indexEquipment($slug = null, Request $request){
+        $productType = new \Stdclass();
+        $productType->id = '';
+        $productType->product_type_name = "Tất cả thiết bị";
+        if($slug != null){
+            $productType = $this->equipmentTypeService->findSlug($slug);
+            $productType->product_type_name = $productType->equipment_type_name;
+        }
+        $sortBy = null;
+        if(isset($request->sort_by)) $sortBy = $request->sort_by;
+        $searchInfo = $this->getSearchInfo($request, $productType);
+        $searchInfo->equipment_type_id = 0;
+        $products = $this->productService->getListProductByEquipmentType($productType->id,$sortBy,$searchInfo);
+        return view('guest.collection.collection',[
+            'products' => $products,
+            'productType' => $productType,
+            'sortBy' => $sortBy,
+            'searchInfo' => $searchInfo
+        ]);
+    }
+
+    public function indexDesign($slug = null, Request $request){
+        $productType = new \Stdclass();
+        $productType->id = '';
+        $productType->product_type_name = "Tất cả thiết trí";
+        if($slug != null){
+            $productType = $this->designTypeService->findSlug($slug);
+            $productType->product_type_name = $productType->design_type_name;
+        }
+        $sortBy = null;
+        if(isset($request->sort_by)) $sortBy = $request->sort_by;
+        $searchInfo = $this->getSearchInfo($request, $productType);
+        $searchInfo->design_type_id = 0;
+        $products = $this->productService->getListProductByDesignType($productType->id,$sortBy,$searchInfo);
         return view('guest.collection.collection',[
             'products' => $products,
             'productType' => $productType,

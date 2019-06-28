@@ -1,1 +1,46 @@
-/**! examples.css 1.0.0 | License: MIT | Homepage: https://github.com/elycruz/jquery-edlc-collapsible-nav#readme | SHA1 Checksum: d0521e09eefcb0a66a559cc05f3a43809b96c854 | Generated: Sat Feb 25 2017 19:54:38 GMT-0500 (Eastern Standard Time) **/html,body{margin:0;padding:0;font-family:'Roboto',Arial, Helvetica, Verdana, sans-serif}html{overflow-y:scroll}p{margin-bottom:21px;line-height:21px}#wrapper{position:relative;width:100%;height:100%;text-align:center}#wrapper>header h1{padding-top:21px;margin:0 0 21px;font-size:21px}#wrapper>*>div{margin:auto;max-width:89%;box-sizing:border-box;text-align:left}#example-1{padding:21px 0;font-weight:normal;color:#FFF;background:#663399}#example-1 .edlc-collapsible-nav{padding:0}
+/**! examples.css 1.0.0 | License: MIT | Homepage: https://github.com/elycruz/jquery-edlc-collapsible-nav#readme | SHA1 Checksum: d0521e09eefcb0a66a559cc05f3a43809b96c854 | Generated: Sat Feb 25 2017 19:54:38 GMT-0500 (Eastern Standard Time) **/
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, Helvetica, Verdana, sans-serif
+}
+
+html {
+    overflow-y: scroll
+}
+
+p {
+    margin-bottom: 21px;
+    line-height: 21px
+}
+
+#wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center
+}
+
+#wrapper > header h1 {
+    padding-top: 21px;
+    margin: 0 0 21px;
+    font-size: 21px
+}
+
+#wrapper > * > div {
+    margin: auto;
+    max-width: 100%;
+    box-sizing: border-box;
+    text-align: left
+}
+
+#example-1 {
+    padding: 21px 0;
+    font-weight: normal;
+    color: #FFF;
+    background: #663399
+}
+
+#example-1 .edlc-collapsible-nav {
+    padding: 0
+}

@@ -109,6 +109,7 @@ class SettingService extends BaseService{
             $params['appEmail'] = $request->app_email;
             $params['appFacebook'] = $request->app_facebook;
             $params['appAddress'] = $request->app_address;
+            $params['appOfficeAddress'] = $request->app_office_address;
             $params['appAddressGoogleMap'] = $request->app_address_google_map;
             $params['appTitleChatBox'] = $request->app_title_chat_box;
             $params['appLinkFacebookFanpage'] = $request->app_link_facebook_fanpage;
@@ -138,6 +139,15 @@ class SettingService extends BaseService{
             $appInfo = $this->settingLogic->createAppInfo();
         }
         $appInfo->about_content = $aboutContent;
+        $this->settingLogic->save($appInfo);
+    }
+
+    public function updateAppOutSourceContent($outSourceContent){
+        $appInfo = $this->settingLogic->getAppInfo();
+        if(!isset($appInfo)){
+            $appInfo = $this->settingLogic->createAppInfo();
+        }
+        $appInfo->out_source_content = $outSourceContent;
         $this->settingLogic->save($appInfo);
     }
     //End App Info

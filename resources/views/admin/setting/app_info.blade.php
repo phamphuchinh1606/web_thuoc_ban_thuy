@@ -55,10 +55,17 @@
                                         </div>
                                     </div>
                                     <div class="form-group row">
-                                        <label class="col-md-2 col-form-label" for="text-input">Địa Chỉ</label>
+                                        <label class="col-md-2 col-form-label" for="text-input">Địa Chỉ Trụ Sở</label>
                                         <div class="col-md-10">
                                             <input class="form-control" id="app_address" type="text" name="app_address" placeholder="Địa chỉ"
                                                    value="{{$appInfo->app_address}}">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <label class="col-md-2 col-form-label" for="text-input">Địa Chỉ Văn Phòng</label>
+                                        <div class="col-md-10">
+                                            <input class="form-control" id="app_address" type="text" name="app_office_address" placeholder="Địa Chỉ Văn Phòng"
+                                                   value="{{$appInfo->app_office_address}}">
                                         </div>
                                     </div>
                                     <div class="form-group row">
@@ -82,41 +89,41 @@
                                                    value="{{$appInfo->app_link_facebook_fanpage}}">
                                         </div>
                                     </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 col-form-label" for="text-input">Link Twitter</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control" id="app_link_twitter" type="text" name="app_link_twitter" placeholder="Địa chỉ twitter"
-                                                   value="{{$appInfo->app_link_twitter}}">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 col-form-label" for="text-input">Link Youtue</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control" id="app_link_youtube" type="text" name="app_link_youtube" placeholder="Địa chỉ youtube"
-                                                   value="{{$appInfo->app_link_youtube}}">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 col-form-label" for="text-input">Link Instagram</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control" id="app_link_instagram" type="text" name="app_link_instagram" placeholder="Địa chỉ instagram"
-                                                   value="{{$appInfo->app_link_instagram}}">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 col-form-label" for="text-input">Video Tạo Sản Phẩm 1</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control" id="app_make_product_video_one" type="text" name="app_make_product_video_one" placeholder="Video tạo sản phẩm 1"
-                                                   value="{{$appInfo->app_make_product_video_one}}">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label class="col-md-2 col-form-label" for="text-input">Video Tạo Sản Phẩm 2</label>
-                                        <div class="col-md-10">
-                                            <input class="form-control" id="app_make_product_video_two" type="text" name="app_make_product_video_two" placeholder="Video tạo sản phẩm 2"
-                                                   value="{{$appInfo->app_make_product_video_two}}">
-                                        </div>
-                                    </div>
+{{--                                    <div class="form-group row">--}}
+{{--                                        <label class="col-md-2 col-form-label" for="text-input">Link Twitter</label>--}}
+{{--                                        <div class="col-md-10">--}}
+{{--                                            <input class="form-control" id="app_link_twitter" type="text" name="app_link_twitter" placeholder="Địa chỉ twitter"--}}
+{{--                                                   value="{{$appInfo->app_link_twitter}}">--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="form-group row">--}}
+{{--                                        <label class="col-md-2 col-form-label" for="text-input">Link Youtue</label>--}}
+{{--                                        <div class="col-md-10">--}}
+{{--                                            <input class="form-control" id="app_link_youtube" type="text" name="app_link_youtube" placeholder="Địa chỉ youtube"--}}
+{{--                                                   value="{{$appInfo->app_link_youtube}}">--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="form-group row">--}}
+{{--                                        <label class="col-md-2 col-form-label" for="text-input">Link Instagram</label>--}}
+{{--                                        <div class="col-md-10">--}}
+{{--                                            <input class="form-control" id="app_link_instagram" type="text" name="app_link_instagram" placeholder="Địa chỉ instagram"--}}
+{{--                                                   value="{{$appInfo->app_link_instagram}}">--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="form-group row">--}}
+{{--                                        <label class="col-md-2 col-form-label" for="text-input">Video Tạo Sản Phẩm 1</label>--}}
+{{--                                        <div class="col-md-10">--}}
+{{--                                            <input class="form-control" id="app_make_product_video_one" type="text" name="app_make_product_video_one" placeholder="Video tạo sản phẩm 1"--}}
+{{--                                                   value="{{$appInfo->app_make_product_video_one}}">--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
+{{--                                    <div class="form-group row">--}}
+{{--                                        <label class="col-md-2 col-form-label" for="text-input">Video Tạo Sản Phẩm 2</label>--}}
+{{--                                        <div class="col-md-10">--}}
+{{--                                            <input class="form-control" id="app_make_product_video_two" type="text" name="app_make_product_video_two" placeholder="Video tạo sản phẩm 2"--}}
+{{--                                                   value="{{$appInfo->app_make_product_video_two}}">--}}
+{{--                                        </div>--}}
+{{--                                    </div>--}}
                                     <div class="form-group row">
                                         <label class="col-md-2 col-form-label" for="text-input">Nội dung mô tả</label>
                                         <div class="col-md-10">

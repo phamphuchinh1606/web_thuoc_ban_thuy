@@ -10,6 +10,8 @@ use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 use App\Services\ProductTypeService;
+use App\Services\EquipmentTypeService;
+use App\Services\DesignTypeService;
 use App\Services\ProductService;
 use App\Services\VendorService;
 use App\Services\SettingService;
@@ -39,10 +41,15 @@ class Controller extends BaseController
 
     protected $albumService;
 
+    protected $equipmentTypeService;
+
+    protected $designTypeService;
+
     public function __construct(ProductTypeService $productTypeService, ProductService $productService,
                                 VendorService $vendorService, SettingService $settingService,
                                 BlogService $blogService, ContactService $contactService, OrderService $orderService,
-                                AddressService $addressService, AlbumService $albumService)
+                                AddressService $addressService, AlbumService $albumService,
+                                EquipmentTypeService $equipmentTypeService, DesignTypeService $designTypeService)
     {
         $this->productTypeService = $productTypeService;
         $this->productService = $productService;
@@ -53,5 +60,7 @@ class Controller extends BaseController
         $this->orderService = $orderService;
         $this->addressService = $addressService;
         $this->albumService = $albumService;
+        $this->equipmentTypeService = $equipmentTypeService;
+        $this->designTypeService = $designTypeService;
     }
 }

@@ -95,4 +95,18 @@ class SettingController extends Controller
         }
         return redirect()->route('admin.setting.app_about.show');
     }
+
+    //Out source
+    public function appOutSourceUpdate(){
+        $appInfo = $this->settingService->getAppInfo();
+        return $this->viewAdmin('setting.out_source_info',['appInfo' => $appInfo]);
+    }
+
+    public function updateOutSourceAppInfo(Request $request){
+        $outSourceContent = $request->out_source_content;
+        if(isset($outSourceContent)){
+            $this->settingService->updateAppOutSourceContent($outSourceContent);
+        }
+        return redirect()->route('admin.setting.app_out_source.show');
+    }
 }
