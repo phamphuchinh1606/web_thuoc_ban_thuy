@@ -8,7 +8,7 @@
                             <span font-size:="" helvetica="">Địa chỉ: {{$appInfo->app_address}}</span>
                         </span>
                         <br style="box-sizing: border-box;"/>
-                        Văn phòng & Nhà : {{$appInfo->app_office_address}}
+                        Văn phòng: {{$appInfo->app_office_address}}
                     </p>
 
                     <p>Hotline văn phòng : <span style="font-family: arial, helvetica, sans-serif;">{{$appInfo->app_fax}} - {{$appInfo->app_phone}}</span>

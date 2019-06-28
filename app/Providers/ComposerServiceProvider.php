@@ -15,7 +15,7 @@ class ComposerServiceProvider extends ServiceProvider
     public function boot()
     {
         View::composer(
-            ['guest.layouts.partials.header.*',
+            ['guest.layouts.partials.header.*','guest.common.*',
                 'admin.common.*'],
             'App\Http\ViewComposers\ProductComposer'
         );

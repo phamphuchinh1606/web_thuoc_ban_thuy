@@ -166,9 +166,7 @@
                                     </div>
                                     <div class="card-footer text-right">
                                         <button class="btn btn-sm btn-primary" type="submit">
-                                            <i class="fa fa-dot-circle-o"></i> Submit</button>
-                                        <button class="btn btn-sm btn-danger" type="reset">
-                                            <i class="fa fa-ban"></i> Reset</button>
+                                            <i class="fa fa-dot-circle-o"></i> Cập Nhật</button>
                                     </div>
                                 </div>
                             </form>
