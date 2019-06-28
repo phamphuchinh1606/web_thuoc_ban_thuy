@@ -17,7 +17,7 @@
                                     <!-- <div class="main-title"><span class="t-transf">Liên hệ</span></div> -->
                                     <div class="form_contact">
                                         <p></p>
-                                        <p>Văn phòng &amp; Nhà xưởng :&nbsp;{{$appInfo->app_address}}</p>
+                                        <p>Văn phòng &amp; Nhà :&nbsp;{{$appInfo->app_address}}</p>
 
                                         <p>
                                             Hotline : <span

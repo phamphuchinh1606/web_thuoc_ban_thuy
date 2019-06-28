@@ -9,7 +9,7 @@
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <!-- CSRF Token -->
     <meta name="_token" content="{{ csrf_token() }}">
-    <title>@yield('head.title','Rem man cua phuong anh')</title>
+    <title>@yield('head.title','Quan ly thang may')</title>
 
     <link href="{{App\Common\AppCommon::assetPublic('css/admin/plugins/coreui-icons.min.css')}}" rel="stylesheet">
     <link href="{{App\Common\AppCommon::assetPublic('css/admin/plugins/flag-icon.min.css')}}" rel="stylesheet">

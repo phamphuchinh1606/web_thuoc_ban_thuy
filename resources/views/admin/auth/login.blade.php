@@ -12,13 +12,13 @@
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <title>CoreUI Pro Bootstrap Admin Template</title>
 
-    <link href="{{asset('css/admin/plugins/coreui-icons.min.css')}}" rel="stylesheet">
-    <link href="{{asset('css/admin/plugins/flag-icon.min.css')}}" rel="stylesheet">
-    <link href="{{asset('css/admin/plugins/font-awesome.min.css')}}" rel="stylesheet">
-    <link href="{{asset('css/admin/plugins/simple-line-icons.css')}}" rel="stylesheet">
+    <link href="{{\App\Common\AppCommon::assetPublic('css/admin/plugins/coreui-icons.min.css')}}" rel="stylesheet">
+    <link href="{{\App\Common\AppCommon::assetPublic('css/admin/plugins/flag-icon.min.css')}}" rel="stylesheet">
+    <link href="{{\App\Common\AppCommon::assetPublic('css/admin/plugins/font-awesome.min.css')}}" rel="stylesheet">
+    <link href="{{\App\Common\AppCommon::assetPublic('css/admin/plugins/simple-line-icons.css')}}" rel="stylesheet">
 
-    <link href="{{asset('css/admin/plugins/style.css')}}" rel="stylesheet">
-    <link href="{{asset('css/admin/plugins/pace.min.css')}}" rel="stylesheet">
+    <link href="{{\App\Common\AppCommon::assetPublic('css/admin/plugins/style.css')}}" rel="stylesheet">
+    <link href="{{\App\Common\AppCommon::assetPublic('css/admin/plugins/pace.min.css')}}" rel="stylesheet">
     <script>
         (function(i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;

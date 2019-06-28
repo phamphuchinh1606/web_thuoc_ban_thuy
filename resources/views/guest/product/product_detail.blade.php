@@ -1,5 +1,7 @@
 @extends('guest.layouts.master')
 
+@section('head.og.image',\App\Common\ImageCommon::showImage($product->product_image))
+
 @section('head.css')
     <link rel="stylesheet" href="{{\App\Common\AppCommon::assetPublic('css/guest/libs/jquery.fancybox.css')}}">
     <link rel="stylesheet" href="{{\App\Common\AppCommon::assetPublic('css/guest/libs/jquery.bxslider.css')}}">

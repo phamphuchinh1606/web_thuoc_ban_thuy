@@ -19,6 +19,42 @@
     <meta name="geo.placename" content="{{$appInfo->app_office_address}}">
     <meta name="author" content="{{$appInfo->app_name}}">
 
+    <!-- FACEBOOK OPEN GRAPH -->
+    <meta property="fb:app_id" content="1233456678" />
+    <meta property="og:site_name" content="{{$appInfo->app_name}}" />
+    <meta property="og:rich_attachment" content="true" />
+    <meta property="article:publisher" content="https://www.facebook.com/saigontoyota" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="@yield('head.og.image',\App\Common\ImageCommon::showImage($appInfo->app_src_icon))">
+    <meta property="og:image:width" content="720" />
+    <meta property="og:image:height" content="480" />
+    <meta property="article:published_time" content="" />
+    <meta property="article:modified_time" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:title" content="@yield('head.og.title',$appInfo->app_name)" />
+    <meta property="og:description" content="@yield('head.og.description',$appInfo->app_content)" />
+    <meta name="apple-itunes-app" content="app-id=818187465">
+
+    <meta property="og:locale" content="vi_VN">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="@yield('head.og.title',$appInfo->app_name)">
+    <meta property="og:description" content="@yield('head.og.description',$appInfo->app_content)">
+    <meta property="og:url" content="@yield('head.og.url',URL::to('/'))">
+    <meta property="og:site_name" content="{{$appInfo->app_name}}">
+    <meta property="article:publisher" content="{{$appInfo->app_link_facebook_fanpage}}">
+    <meta property="og:site_name" content="{{$appInfo->app_name}}">
+    <meta name="twitter:site" content="@https://">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="@yield('head.twitter.title',$appInfo->app_name)">
+    <meta name="twitter:description" content="@yield('head.twitter.description',$appInfo->app_content)">
+
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=0' name='viewport'/>
+    <meta name="description" content="@yield('head.description',$appInfo->app_content)">
+    <meta name="keywords" content="{{$appInfo->app_content}}">
+    <link rel="canonical" href="{{URL::to('/')}}"/>
+    <link rel="pingback" href="{{URL::to('/')}}">
+
+
     <link rel="stylesheet" href="{{AppCommon::assetPublic('css/guest/libs/bootstrap.min.css')}}">
 
     <link rel="stylesheet" href="{{AppCommon::assetPublic('css/guest/libs/edlc-collapsible-nav.css')}}">
