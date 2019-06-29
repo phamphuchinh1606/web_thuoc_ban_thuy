@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4613cb4d-f0f1-44e6-af26-67917b162aab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/update.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/update.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guest/common/__left_product_type_list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guest/common/__left_product_type_list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guest/contact/contact.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guest/contact/contact.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/guest/layouts/partials/__footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guest/layouts/partials/__footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/guest/layouts/partials/header/__header_nav.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/guest/layouts/partials/header/__header_nav.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,27 +21,36 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
               <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-              <folding>
-                <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
+            <state relative-caret-position="272">
               <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Common/Constant.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/guest/layouts/partials/header/__header_nav.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="25" column="51" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="25" selection-end-column="51" />
+            <state relative-caret-position="204">
+              <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+              <folding>
+                <element signature="n#style#0;n#span#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,7 +150,6 @@
         <option value="$PROJECT_DIR$/app/Logics/SettingLogic.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/setting/app_info.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/guest/layouts/partials/header/__header_bar.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/guest/layouts/partials/header/__header_nav.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/guest/collection/__center_content.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/guest/product/__product_content.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/product/index.blade.php" />
@@ -172,6 +177,7 @@
         <option value="$PROJECT_DIR$/resources/views/guest/contact/contact.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/guest/common/__left_product_type_list.blade.php" />
         <option value="$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php" />
+        <option value="$PROJECT_DIR$/resources/views/guest/layouts/partials/header/__header_nav.blade.php" />
       </list>
     </option>
   </component>
@@ -301,34 +307,6 @@
               <item name="web_thuoc_ban_thuy" type="b2602c69:ProjectViewProjectNode" />
               <item name="web_thuoc_ban_thuy" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web_thuoc_ban_thuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_thuoc_ban_thuy" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web_thuoc_ban_thuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_thuoc_ban_thuy" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="Controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="Admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web_thuoc_ban_thuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_thuoc_ban_thuy" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Http" type="462c0819:PsiDirectoryNode" />
-              <item name="ViewComposers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web_thuoc_ban_thuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_thuoc_ban_thuy" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="Providers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -341,29 +319,6 @@
               <item name="web_thuoc_ban_thuy" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web_thuoc_ban_thuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_thuoc_ban_thuy" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web_thuoc_ban_thuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_thuoc_ban_thuy" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="product" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="web_thuoc_ban_thuy" type="b2602c69:ProjectViewProjectNode" />
-              <item name="web_thuoc_ban_thuy" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="admin" type="462c0819:PsiDirectoryNode" />
-              <item name="productType" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="web_thuoc_ban_thuy" type="b2602c69:ProjectViewProjectNode" />
@@ -507,17 +462,19 @@
       <updated>1561609974938</updated>
       <workItem from="1561609976030" duration="13181000" />
       <workItem from="1561638344855" duration="16769000" />
+      <workItem from="1561728650910" duration="30000" />
+      <workItem from="1561778157722" duration="1117000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57671000" />
+    <option name="totallyTimeSpent" value="59483000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25479743" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26012793" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -543,13 +500,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/routes/guest/route_blog.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="15" column="44" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Logics/BlogLogic.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -878,27 +828,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/guest/layouts/partials/header/__header_nav.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="25" column="51" lean-forward="true" selection-start-line="21" selection-start-column="40" selection-end-line="25" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/guest/common/__left_product_type_list.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-          <folding>
-            <element signature="n#style#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Providers/ComposerServiceProvider.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
+        <state relative-caret-position="272">
           <caret line="17" column="61" selection-start-line="17" selection-start-column="61" selection-end-line="17" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Common/Constant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/guest/layouts/partials/header/__header_nav.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#a#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

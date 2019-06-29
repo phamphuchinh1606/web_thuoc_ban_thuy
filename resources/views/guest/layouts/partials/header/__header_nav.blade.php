@@ -1,16 +1,19 @@
 <div class="fix-nav">
     <div class="container p-relative">
         <div class="row">
-            <div class="col-md-2 col-sm-12 col-xs-12">
+            <div class="col-md-3 col-sm-12 col-xs-12">
                 <div class="nav-rp">
                     <a href="#nav-rp"><img src="{{\App\Common\AppCommon::assetPublic('images/guest/nav-rp.png')}}" alt="Menu"></a>
                 </div>
-                <div class="logo"><a href="">
-                        <img src="{{\App\Common\ImageCommon::showImage($appInfo->app_src_icon)}}" alt="{{$appInfo->app_name}}"></a>
+                <div class="logo">
+                    <a href="">
+                        <img src="{{\App\Common\ImageCommon::showImage($appInfo->app_src_icon)}}" alt="{{$appInfo->app_name}}">
+                        <span style="font-family: 'Open Sans', sans-serif;font-size: 14px;font-weight: bold">TOÀN THẮNG ELEVATOR</span>
+                    </a>
                 </div>
                 <div class="clear"></div>
             </div>
-            <div class="col-md-10 col-sm-12 col-xs-12 hidden-rp">
+            <div class="col-md-9 col-sm-12 col-xs-12 hidden-rp">
                 <div class="navigation">
                     <div id="menu"><!--menu-->
                         <div class="inner"><!--inner-->
