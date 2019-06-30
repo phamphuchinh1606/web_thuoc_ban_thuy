@@ -15,6 +15,8 @@ Route::group(['prefix' => 'admin'], function () {
     Route::get('/login-admin','Auth\LoginController@showLoginForm')->name('admin.login');
     Route::post('/login-admin','Auth\LoginController@login')->name('admin.login');
     Route::get('/logout-admin','Auth\LoginController@logout')->name('admin.logout');
+    Route::get('/change-pass-admin','Auth\ResetPasswordController@change_pass')->name('admin.change_pass');
+    Route::post('/change-pass-admin','Auth\ResetPasswordController@updatePass')->name('admin.update_pass');
 });
 //
 //Route::get('/', function () {
