@@ -11,7 +11,7 @@
                         Văn phòng: {{$appInfo->app_office_address}}
                     </p>
 
-                    <p>Hotline văn phòng : <span style="font-family: arial, helvetica, sans-serif;">{{$appInfo->app_fax}} - {{$appInfo->app_phone}}</span>
+                    <p>Hotline văn phòng : <span style="font-family: arial, helvetica, sans-serif;">@if($appInfo->app_fax != ''){{$appInfo->app_fax}} - @endif {{$appInfo->app_phone}}</span>
                     </p>
 
                     <p><span style="font-family: arial, helvetica, sans-serif;">Mail:  {{$appInfo->app_email}}</span>

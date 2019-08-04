@@ -20,8 +20,10 @@
                                         <p>Văn phòng :&nbsp;{{$appInfo->app_address}}</p>
 
                                         <p>
+                                            @if($appInfo->app_fax != '')
                                             Hotline : <span
                                                     style="font-family: arial, helvetica, sans-serif;">{{$appInfo->app_fax}}</span><br>
+                                            @endif
                                             Điện Thoại : <span
                                                     style="font-family: arial, helvetica, sans-serif;">{{$appInfo->app_phone}}</span><br>
                                             Email&nbsp; &nbsp;: {{$appInfo->app_email}}</p>

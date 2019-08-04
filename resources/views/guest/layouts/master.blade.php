@@ -206,7 +206,7 @@
 <div id="nova_phone_div" class="nova-phone nova-green nova-show">
     <div class="nova-ph-circle"></div>
     <div class="nova-ph-circle-fill"></div>
-    <a href="tel:0907 130 484-0938957362">
+    <a href="tel:{{$appInfo->app_phone}}">
         <div class="nova-ph-img-circle"></div>
         <div class="suntory-phone">{{$appInfo->app_phone}}</div>
     </a>
