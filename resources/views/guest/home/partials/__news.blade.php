@@ -27,11 +27,11 @@
                             <ul>
                                 @foreach($productTypes as $productType)
                                     <li>
-                                        <a href="{{route('collection')}}">
+                                        <a href="{{route('collection',['slug' => $productType->slug])}}">
                                             <img src="{{\App\Common\ImageCommon::showImage($productType->image_icon)}}">
                                         </a>
                                         <h4>
-                                            <a href="{{route('collection')}}">{{$productType->product_type_name}}</a>
+                                            <a href="{{route('collection',['slug' => $productType->slug])}}">{{$productType->product_type_name}}</a>
                                         </h4>
                                     </li>
                                 @endforeach
